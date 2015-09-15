@@ -3477,7 +3477,7 @@ EB 23 E6 AE 17 31 9C 4B AA 90 89 86 F4 7E E0 0E 60 5E D9 8D 4B 92 D4 23 F3 88 B9
 F4 01 E0 6E E0 A8 94 4E 25 49 2A CE 51 C4 1C D7 C9 7C 68 38 97 54 B8 4E 42 FA 32 E0 62 60 FB A4 
 1E 25 49 2A DA F6 C4 5C B7 0C C3 B9 A4 0A 98 09 FC 0D B0 92 CD 57 CD 1F 06 4E 04 26 A7 75 27 49 
 52 39 26 13 73 DE C3 6C BE 70 B5 12 F8 16 86 73 8D C3 FF 03 63 F8 EE 2E BE 9A 04 B1 00 00 00 00 
-49 45 4E 44 AE 42 60 82 89 
+49 45 4E 44 AE 42 60 82 46 
 EndData
 $EndBitmap
 $Comp
@@ -3488,6 +3488,7 @@ F 0 "U7" H 3650 7300 60  0000 L CNN
 F 1 "OSC" H 3650 7200 60  0000 L CNN
 F 2 "XESS:2.5x3.2" H 3450 7050 50  0001 C CNN
 F 3 "" H 3450 7050 50  0000 C CNN
+F 4 "501ACA100M000CAG" H 3450 7050 60  0001 C CNN "manf#"
 	1    3450 7050
 	1    0    0    -1  
 $EndComp
@@ -3517,12 +3518,7 @@ Wire Wire Line
 	9300 1400 9900 1400
 Wire Wire Line
 	9800 1400 9800 1300
-Wire Wire Line
-	9600 1500 9600 1300
-Wire Wire Line
-	9100 1500 9900 1500
 Connection ~ 9800 1400
-Connection ~ 9600 1500
 Text GLabel 9600 1000 1    50   Input ~ 0
 +3.3V
 Text GLabel 9900 4200 0    50   Input ~ 0
@@ -3541,7 +3537,7 @@ Text GLabel 9900 3400 0    50   Input ~ 0
 BCM5
 Text GLabel 9900 4500 0    50   Input ~ 0
 BCM22
-Text GLabel 9900 5000 0    50   Input ~ 0
+Text GLabel 9900 4900 0    50   Input ~ 0
 BCM27_PCM_0
 Text GLabel 9900 5400 0    50   Input ~ 0
 BCM17
@@ -3559,7 +3555,7 @@ Text GLabel 9900 5100 0    50   Input ~ 0
 BCM14_TXD
 Text GLabel 9900 5200 0    50   Input ~ 0
 BCM15_RXD
-Text GLabel 9900 4900 0    50   Input ~ 0
+Text GLabel 9900 5000 0    50   Input ~ 0
 BCM18_PCM_C
 Text GLabel 9900 4400 0    50   Input ~ 0
 BCM23
@@ -3663,29 +3659,29 @@ Text GLabel 1400 5600 0    50   Input ~ 0
 PM2-A2
 Text GLabel 1400 5000 0    50   Input ~ 0
 PM2-B2
-Text GLabel 1400 4700 0    50   Input ~ 0
-PM2-A3
 Text GLabel 1400 4800 0    50   Input ~ 0
+PM2-A3
+Text GLabel 1400 4700 0    50   Input ~ 0
 PM2-B3
-Text GLabel 1400 4500 0    50   Input ~ 0
-PM2-A4
 Text GLabel 1400 4200 0    50   Input ~ 0
+PM2-A4
+Text GLabel 1400 4500 0    50   Input ~ 0
 PM2-B4
-Text GLabel 1400 2700 0    50   Input ~ 0
-PM3-B1
-Text GLabel 1400 2400 0    50   Input ~ 0
-PM3-A2
-Text GLabel 1400 2200 0    50   Input ~ 0
-PM3-B2
-Text GLabel 1400 1800 0    50   Input ~ 0
-PM3-A3
-Text GLabel 1400 1200 0    50   Input ~ 0
-PM3-B3
-Text GLabel 1400 1700 0    50   Input ~ 0
-PM3-A4
-Text GLabel 1400 1000 0    50   Input ~ 0
-PM3-B4
 Text GLabel 1400 2300 0    50   Input ~ 0
+PM3-B1
+Text GLabel 1400 2200 0    50   Input ~ 0
+PM3-A2
+Text GLabel 1400 2400 0    50   Input ~ 0
+PM3-B2
+Text GLabel 1400 1200 0    50   Input ~ 0
+PM3-A3
+Text GLabel 1400 1800 0    50   Input ~ 0
+PM3-B3
+Text GLabel 1400 1000 0    50   Input ~ 0
+PM3-A4
+Text GLabel 1400 1700 0    50   Input ~ 0
+PM3-B4
+Text GLabel 1400 2700 0    50   Input ~ 0
 PM3-A1
 $Comp
 L SW_PUSH RESET1
@@ -3698,15 +3694,8 @@ F 3 "" H 8800 1500 60  0000 C CNN
 	1    8800 1500
 	1    0    0    -1  
 $EndComp
-Text GLabel 8500 1500 0    50   Input ~ 0
+Text GLabel 8300 1500 0    50   Input ~ 0
 GND
-Wire Wire Line
-	9300 1500 9300 1800
-Wire Wire Line
-	9300 1800 9100 1800
-Connection ~ 9300 1500
-Text GLabel 8400 1800 0    50   Input ~ 0
-BCM26
 $Comp
 L JUMPER JP5
 U 1 1 55F44072
@@ -3733,8 +3722,8 @@ Wire Wire Line
 	9300 1400 9300 1150
 Wire Wire Line
 	9300 1150 9100 1150
-Text GLabel 8500 1150 0    50   Input ~ 0
-BCM6
+Text GLabel 8300 1150 0    50   Input ~ 0
+BCM17
 Text GLabel 9800 1000 1    50   Input ~ 0
 +3.3V
 Text GLabel 9900 6200 0    50   Input ~ 0
@@ -3743,8 +3732,6 @@ Text GLabel 3400 6100 0    50   Input ~ 0
 +3.3V
 Text GLabel 1400 6100 0    50   Input ~ 0
 +3.3V
-Text GLabel 1400 2600 0    50   Input ~ 0
-SW1
 Text GLabel 1400 3600 0    50   Input ~ 0
 SW2
 Text GLabel 1400 3200 0    50   Input ~ 0
@@ -3755,12 +3742,136 @@ Text GLabel 1400 3900 0    50   Input ~ 0
 LED3
 Text GLabel 1400 4100 0    50   Input ~ 0
 LED4
+Text GLabel 1400 6000 0    50   Input ~ 0
+DIPSW4
+Text GLabel 1400 5500 0    50   Input ~ 0
+DIPSW3
+Text GLabel 1400 5400 0    50   Input ~ 0
+DIPSW2
+Text GLabel 1400 4300 0    50   Input ~ 0
+DIPSW1
+Text GLabel 1400 1600 0    50   Input ~ 0
+SW1
+Text GLabel 5400 4100 0    50   Input ~ 0
+SATA1_A+
+Text GLabel 5400 4200 0    50   Input ~ 0
+SATA1_A-
+Text GLabel 5400 4300 0    50   Input ~ 0
+SATA1_B+
+Text GLabel 5400 4400 0    50   Input ~ 0
+SATA1_B-
+Text GLabel 5400 5600 0    50   Input ~ 0
+SATA2_A+
+Text GLabel 5400 5500 0    50   Input ~ 0
+SATA2_A-
+Text GLabel 5400 5900 0    50   Input ~ 0
+SATA2_B+
+Text GLabel 5400 6000 0    50   Input ~ 0
+SATA2_B-
+Text GLabel 5400 3900 0    50   Input ~ 0
+HDR1-1
+Text GLabel 5400 3700 0    50   Input ~ 0
+HDR1-4
+Text GLabel 5400 3000 0    50   Input ~ 0
+HDR1-7
+Text GLabel 5400 3800 0    50   Input ~ 0
+HDR1-2
+Text GLabel 5400 3600 0    50   Input ~ 0
+HDR1-3
+Text GLabel 5400 3200 0    50   Input ~ 0
+HDR1-6
+Text GLabel 5400 3400 0    50   Input ~ 0
+HDR1-8
+Text GLabel 5400 2400 0    50   Input ~ 0
+HDR1-12
+Text GLabel 5400 2600 0    50   Input ~ 0
+HDR1-9
+Text GLabel 5400 1800 0    50   Input ~ 0
+HDR1-13
+Text GLabel 5400 1300 0    50   Input ~ 0
+HDR1-18
+Text GLabel 5400 1000 0    50   Input ~ 0
+HDR1-19
+Text GLabel 5400 1200 0    50   Input ~ 0
+HDR1-20
+Text GLabel 5400 1400 0    50   Input ~ 0
+HDR1-17
+Text GLabel 5400 1600 0    50   Input ~ 0
+HDR1-16
+Text GLabel 5400 2200 0    50   Input ~ 0
+HDR1-11
+Text GLabel 5400 2800 0    50   Input ~ 0
+HDR1-10
+Text GLabel 5400 2000 0    50   Input ~ 0
+HDR1-14
+Text GLabel 4550 7050 2    50   Input ~ 0
++3.3V
+Text GLabel 3450 7050 0    50   Input ~ 0
++3.3V
+Text GLabel 3450 7150 0    50   Input ~ 0
+GND
+Text GLabel 4550 7150 2    50   Output ~ 0
+USER_CLK
+Text GLabel 1400 3400 0    50   Input ~ 0
+USER_CLK
 Wire Wire Line
-	8500 1800 8400 1800
+	9900 1500 9100 1500
 Wire Wire Line
-	8500 1800 8500 2000
+	9600 1300 9600 1500
+Connection ~ 9600 1500
 Wire Wire Line
-	8500 2000 9100 2000
+	9100 1800 9200 1800
 Wire Wire Line
-	9100 2000 9100 1800
+	9200 1800 9200 1500
+Connection ~ 9200 1500
+Text GLabel 8300 1800 0    50   Input ~ 0
+BCM22
+$Comp
+L JSHORTNORMAL J?
+U 1 1 55F913D4
+P 8850 1300
+AR Path="/55F913D4" Ref="J?"  Part="1" 
+AR Path="/55DF5F27/55E883EA/55F049F2/55F913D4" Ref="J2"  Part="1" 
+F 0 "J2" H 8850 1200 50  0001 L BNN
+F 1 "JSHORTNORMAL" H 8750 1200 50  0001 L BNN
+F 2 "XESS:xess-JSHORT" H 8850 1450 50  0001 C CNN
+F 3 "" H 8850 1300 60  0000 C CNN
+	1    8850 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L JSHORTNORMAL J?
+U 1 1 55F913E4
+P 8850 1950
+AR Path="/55F913E4" Ref="J?"  Part="1" 
+AR Path="/55DF5F27/55E883EA/55F049F2/55F913E4" Ref="J3"  Part="1" 
+F 0 "J3" H 8850 1850 50  0001 L BNN
+F 1 "JSHORTNORMAL" H 8750 1850 50  0001 L BNN
+F 2 "XESS:xess-JSHORT" H 8850 2100 50  0001 C CNN
+F 3 "" H 8850 1950 60  0000 C CNN
+	1    8850 1950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 1150 8300 1150
+Wire Wire Line
+	8500 1500 8300 1500
+Wire Wire Line
+	8500 1800 8300 1800
+Wire Wire Line
+	9100 1150 9100 1300
+Wire Wire Line
+	9100 1300 8850 1300
+Wire Wire Line
+	8750 1300 8500 1300
+Wire Wire Line
+	8500 1300 8500 1150
+Wire Wire Line
+	8500 1800 8500 1950
+Wire Wire Line
+	8500 1950 8750 1950
+Wire Wire Line
+	8850 1950 9100 1950
+Wire Wire Line
+	9100 1950 9100 1800
 $EndSCHEMATC
