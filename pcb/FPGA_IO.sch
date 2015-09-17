@@ -3477,7 +3477,7 @@ EB 23 E6 AE 17 31 9C 4B AA 90 89 86 F4 7E E0 0E 60 5E D9 8D 4B 92 D4 23 F3 88 B9
 F4 01 E0 6E E0 A8 94 4E 25 49 2A CE 51 C4 1C D7 C9 7C 68 38 97 54 B8 4E 42 FA 32 E0 62 60 FB A4 
 1E 25 49 2A DA F6 C4 5C B7 0C C3 B9 A4 0A 98 09 FC 0D B0 92 CD 57 CD 1F 06 4E 04 26 A7 75 27 49 
 52 39 26 13 73 DE C3 6C BE 70 B5 12 F8 16 86 73 8D C3 FF 03 63 F8 EE 2E BE 9A 04 B1 00 00 00 00 
-49 45 4E 44 AE 42 60 82 E6 
+49 45 4E 44 AE 42 60 82 71 
 EndData
 $EndBitmap
 $Comp
@@ -3514,11 +3514,6 @@ F 3 "" H 9800 1300 50  0000 C CNN
 	2    9800 1300
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9300 1400 9900 1400
-Wire Wire Line
-	9800 1400 9800 1300
-Connection ~ 9800 1400
 Text GLabel 9600 1000 1    50   Input ~ 0
 +3.3V
 Text GLabel 9900 4200 0    50   Input ~ 0
@@ -3535,9 +3530,9 @@ Text GLabel 9900 5900 0    50   Input ~ 0
 BCM2_SDA
 Text GLabel 9900 3400 0    50   Input ~ 0
 BCM5
-Text GLabel 9900 4500 0    50   Input ~ 0
-BCM22
 Text GLabel 9900 4900 0    50   Input ~ 0
+BCM22
+Text GLabel 9900 4500 0    50   Input ~ 0
 BCM27_PCM_0
 Text GLabel 9900 5400 0    50   Input ~ 0
 BCM17
@@ -3694,7 +3689,7 @@ F 3 "" H 8800 1500 60  0000 C CNN
 	1    8800 1500
 	1    0    0    -1  
 $EndComp
-Text GLabel 8300 1500 0    50   Input ~ 0
+Text GLabel 8200 1500 0    50   Input ~ 0
 GND
 $Comp
 L JUMPER JP5
@@ -3718,10 +3713,6 @@ F 3 "" H 8800 1150 60  0000 C CNN
 	1    8800 1150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9300 1400 9300 1150
-Wire Wire Line
-	9300 1150 9100 1150
 Text GLabel 8300 1150 0    50   Input ~ 0
 BCM17
 Text GLabel 9800 1000 1    50   Input ~ 0
@@ -3768,13 +3759,13 @@ Text GLabel 5400 5900 0    50   Input ~ 0
 SATA2_B+
 Text GLabel 5400 6000 0    50   Input ~ 0
 SATA2_B-
-Text GLabel 5400 3900 0    50   Input ~ 0
+Text GLabel 5400 3800 0    50   Input ~ 0
 HDR1-1
 Text GLabel 5400 3700 0    50   Input ~ 0
 HDR1-4
 Text GLabel 5400 3000 0    50   Input ~ 0
 HDR1-7
-Text GLabel 5400 3800 0    50   Input ~ 0
+Text GLabel 5400 3900 0    50   Input ~ 0
 HDR1-2
 Text GLabel 5400 3600 0    50   Input ~ 0
 HDR1-3
@@ -3855,13 +3846,7 @@ $EndComp
 Wire Wire Line
 	8500 1150 8300 1150
 Wire Wire Line
-	8500 1500 8300 1500
-Wire Wire Line
 	8500 1800 8300 1800
-Wire Wire Line
-	9100 1150 9100 1300
-Wire Wire Line
-	9100 1300 8850 1300
 Wire Wire Line
 	8750 1300 8500 1300
 Wire Wire Line
@@ -3886,4 +3871,33 @@ Text GLabel 1400 900  0    50   Input ~ 0
 GR3-IO1
 Text GLabel 1400 1500 0    50   Input ~ 0
 GR3-IO2
+Wire Wire Line
+	8850 1300 9200 1300
+Wire Wire Line
+	9200 1300 9200 1150
+Wire Wire Line
+	9100 1150 9400 1150
+Wire Wire Line
+	9400 1150 9400 1400
+Wire Wire Line
+	9400 1400 9900 1400
+Connection ~ 9200 1150
+Wire Wire Line
+	9800 1300 9800 1400
+Connection ~ 9800 1400
+$Comp
+L R_Small R7
+U 1 1 55FA4B25
+P 8350 1500
+F 0 "R7" V 8250 1450 50  0000 L CNN
+F 1 "100" V 8350 1500 40  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 8350 1500 60  0001 C CNN
+F 3 "" H 8350 1500 60  0000 C CNN
+	1    8350 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8200 1500 8250 1500
+Wire Wire Line
+	8450 1500 8500 1500
 $EndSCHEMATC
