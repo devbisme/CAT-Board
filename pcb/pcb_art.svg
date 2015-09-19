@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91pre4 r13712"
+   sodipodi:docname="pcb_art.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78016527"
+     inkscape:cx="351.97696"
+     inkscape:cy="478.26498"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="954"
+     inkscape:window-x="1804"
+     inkscape:window-y="90"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:45px;line-height:179.99999523%;font-family:AcmeFont;-inkscape-font-specification:'AcmeFont Thin';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0;word-spacing:0;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       x="124.17065"
+       y="430.6026"
+       id="text3336"
+       sodipodi:linespacing="180%"
+       inkscape:export-xdpi="234.58"
+       inkscape:export-ydpi="234.58"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="124.17065"
+         y="430.6026"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'AR CHRISTY';-inkscape-font-specification:'AR CHRISTY Thin'">CAT in the HAT Board</tspan></text>
+    <text
+       inkscape:export-ydpi="234.58"
+       inkscape:export-xdpi="234.58"
+       sodipodi:linespacing="180%"
+       id="text3340"
+       y="502.20465"
+       x="125.98336"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:45px;line-height:179.99999523%;font-family:AcmeFont;-inkscape-font-specification:'AcmeFont Thin';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0;word-spacing:0;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-family:'AR CHRISTY';-inkscape-font-specification:'AR CHRISTY Thin'"
+         y="502.20465"
+         x="125.98336"
+         id="tspan3342"
+         sodipodi:role="line">CAT Board</tspan></text>
+    <text
+       xml:space="preserve"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:45px;line-height:112.99999952%;font-family:'AR CHRISTY';-inkscape-font-specification:'AR CHRISTY Thin';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0;word-spacing:0;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       x="157.7058"
+       y="574.71307"
+       id="text3344"
+       sodipodi:linespacing="95%"
+       inkscape:export-xdpi="234.58"
+       inkscape:export-ydpi="234.58"><tspan
+         sodipodi:role="line"
+         id="tspan3346"
+         x="157.7058"
+         y="574.71307"
+         style="line-height:95%">Don't <tspan
+   style="font-size:60px;line-height:95%"
+   id="tspan3356">Mistake</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="157.7058"
+         y="642.51306"
+         id="tspan3348"
+         style="line-height:95%">    Being <tspan
+   style="font-size:60px;line-height:95%"
+   id="tspan3352">humorless</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="157.7058"
+         y="710.31305"
+         id="tspan3350"
+         style="line-height:95%">For Being <tspan
+   style="font-size:60px;line-height:95%"
+   id="tspan3354">Serious</tspan></tspan></text>
+  </g>
+</svg>
