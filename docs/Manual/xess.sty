@@ -1,0 +1,576 @@
+% Required packages.
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{tabu}          % For tables with colored headers.
+\usepackage{array}         % For tables.
+\usepackage{hhline}        % For table cell borders.
+\usepackage{graphicx}
+\usepackage{calc}          % For calculating dimensions
+\usepackage[dvipsnames,svgnames,x11names,table]{xcolor} % For coloring page objects.
+\usepackage{geometry}      % For sizing page areas.
+\usepackage{fontspec}      % For loading fonts.
+\usepackage{anyfontsize}   % For scaling fonts.
+\usepackage{textcomp}      % For copyright, trademark symbols.
+\usepackage{wrapfig}       % For wrapping text around figures.
+\usepackage{tikz}          % For overlaying graphics on pages. 
+\usepackage{tikzpagenodes} % TikZ anchor points for a page.
+\usepackage{etoolbox}      % For conditionals.
+\usepackage{listings}      % For program/code listings.
+\usepackage{hyperref}      % For hyperlinks.
+\usepackage{bookmark}      % For PDF bookmarks. Must come after hyperref package.
+
+
+% Commonly-used substitutions.
+\newcommand{\warning}[1]{\textbf{#1}}
+\newcommand{\emphasis}[1]{\textit{#1}}
+\newcommand{\regtmark}[1]{{#1}\textsuperscript{\textregistered}}
+\newcommand{\xess}{XESS}
+\newcommand{\xesslogo}{xess-logo.png}          % Just "XESS".
+\newcommand{\xesscorplogo}{xesscorp-logo.png}  % "XESS Corporation".
+\newcommand{\helpemail}{help@xess.com}
+\newcommand{\helppage}{www.xess.com/interact/contact/}
+\newcommand{\by}{$\times$}
+% Place text between || to make inline listing.
+\lstMakeShortInline[columns=fixed]|
+\newcommand{\pgm}[1]{\lstinline{#1}} % inline listing mode for programs, keywords, etc.
+\newcommand{\filename}[1]{\lstinline{#1}}
+
+\newcommand{\digpmod}{PMOD}
+\newcommand{\digpmodtm}{\regtmark{\digpmod}}
+\newcommand{\rpi}{Raspberry Pi}
+
+\defaultfontfeatures{Ligatures=TeX} % Enable dash conversions: -- is \textendash
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Itemized list bullets.
+\renewcommand{\labelitemi}{\fontsize{8pt}{13pt}$\blacksquare$}
+\renewcommand{\labelitemii}{\fontsize{10pt}{13pt}$\bullet$}
+\renewcommand{\labelitemiii}{\fontsize{9pt}{13pt}$\blacklozenge$}
+\renewcommand{\labelitemiv}{\fontsize{9pt}{13pt}$\blacktriangle$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Code listing style.
+\lstset{
+  tabsize=4,
+  xleftmargin=0.0\textwidth,
+  basicstyle=\small\ttfamily,
+  commentstyle=\itshape\color{purple!40!black},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Image/picture stuff.
+\graphicspath{{./}{./figures/}{./images/}{./pics/}{C:/xesscorp/LOGOS/}}
+\newcommand{\fixedpic}[1]{\begin{center} #1 \end{center}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main fonts for documents.
+\setmainfont{Arial}
+\newfontfamily{\footerfont}{Verdana}
+\newcommand{\usefooterfont}[1]{\fontsize{9pt}{11pt}\footerfont #1}
+\newfontfamily{\headerfont}{Verdana}
+\newcommand{\useheaderfont}[1]{\fontsize{9pt}{11pt}\headerfont #1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page layout.
+
+% Page margins.
+\settrims{0in}{0in} % Page size is the same as the stock size.
+\setlrmarginsandblock{1.75in}{0.75in}{*} % Sets the textbody width.
+\setulmarginsandblock{1.1in}{1.03in}{*} % Sets the textbody height.
+\setheadfoot{0.60in}{0.63in} % Set the header height and the dist to the footer bottom.
+\setheaderspaces{*}{0.50in}{*} % Set separation between textbody top and header bottom.
+\setmarginnotes{0.1in}{0.9in}{0.1in} % Sep from textbody, note width, min vert separation.
+
+% Page headers.
+\def\headfootrulethickness{1.0pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\makeevenhead{headings}
+	{\useheaderfont\bfseries\leftmark}
+	{}
+	{\includegraphics[width=1.5in]{\xesslogo}}
+\makeoddhead{headings}
+	{\useheaderfont\bfseries\leftmark}
+	{}
+	{\includegraphics[width=1.5in]{\xesslogo}}
+
+% Page footers.
+\makeevenfoot{headings}
+	{\usefooterfont\docversion, \today}
+	{\usefooterfont\@title}
+	{\usefooterfont\thepage}
+\makeoddfoot{headings}
+	{\usefooterfont\docversion, \today}
+	{\usefooterfont\@title}
+	{\usefooterfont\thepage}
+\makefootrule{headings}{\textwidth}{\headfootrulethickness}{1pt}
+
+% Finalize the page layout.
+\setlength\parindent{0pt}
+%\setlength\parskip{1em}
+\setlength\parskip{\baselineskip}
+\raggedbottom
+\checkandfixthelayout
+
+% Make the header/footer wider than the textbody width.
+\def\hdrwd{\dimexpr\textwidth+1.0in}
+\makerunningwidth{headings}{\hdrwd}
+\makeheadposition{headings}{flushleft}{flushright}{flushleft}{flushright}
+\makeheadrule{headings}{\hdrwd}{\headfootrulethickness}
+\makefootrule{headings}{\hdrwd}{\headfootrulethickness}{1pt}
+
+% Page style for frontmatter.
+\copypagestyle{frontmatterpagestyle}{headings}
+\makeevenhead{frontmatterpagestyle}
+	{}
+	{}
+	{\includegraphics[width=1.5in]{\xesslogo}}
+\makeoddhead{frontmatterpagestyle}
+	{}
+	{}
+	{\includegraphics[width=1.5in]{\xesslogo}}
+\makeevenfoot{frontmatterpagestyle}
+	{\usefooterfont\docversion, \today}
+	{}
+	{\usefooterfont\doctitle}
+\makeoddfoot{frontmatterpagestyle}
+	{\usefooterfont\docversion, \today}
+	{}
+	{\usefooterfont\doctitle}
+
+% Page style for first page of chapter.
+\copypagestyle{startchapterpagestyle}{headings}
+\makeheadrule{startchapterpagestyle}{0pt}{0pt} % Remove header on starting page of chapter.
+\makeevenhead{startchapterpagestyle}
+	{}
+	{}
+	{\includegraphics[width=1.5in]{\xesslogo}}
+\makeoddhead{startchapterpagestyle}
+	{}
+	{}
+	{\includegraphics[width=1.5in]{\xesslogo}}
+\copypagestyle{chapter}{startchapterpagestyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define a new XESS variable:
+% \defxsvar{myvar}
+% Now you can set it like this: \myvar{whatever}
+% and use it like this: Here's some text with \myvar\ in it.
+% This doesn't currently work!
+%\newcommand{\defxsvar}[1]{
+%	\newcommand{#1}[1][]
+%	{
+%		%\expandafter\def\csname @xsvar\the\xsvarnum\endcsname{##1}
+%		\ifstrempty{##1}{%
+%			\csname #1v\endcsname
+%		}{%
+%			\expandafter\def\csname #1v\endcsname\##1
+%		}
+%	}
+%}
+
+% Define identifiers for documentation.
+\newcommand{\doctitle}[1][]{\ifstrempty{#1}{\@doctitle}{\def\@doctitle{#1}}}
+\newcommand{\docsubtitle}[1][]{\ifstrempty{#1}{\@docsubtitle}{\def\@docsubtitle{#1}}}
+\newcommand{\docnum}[1][]{\ifstrempty{#1}{\@docnum}{\def\@docnum{#1}}}
+\newcommand{\docversion}[1][]{\ifstrempty{#1}{\@docversion}{\def\@docversion{#1}}}
+% Define identifiers for product manual.
+\newcommand{\manualtitle}[1]{\title{{#1} Manual}\doctitle[\@title]}
+\newcommand{\manualsubtitle}[1]{\docsubtitle[How to install and use\\your new {#1}]}
+\newcommand{\manualnum}[1]{\docnum[MAN{#1}]}
+\newcommand{\manualversion}[1]{\docversion[V{#1}]}
+
+% Define a product name.
+\newcommand{\product}[1][]{%
+	\ifstrempty{#1}{\@product}{
+		\def\@product{#1}
+		\manualtitle{\product}
+		\manualsubtitle{\product}
+	}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table formating commands.
+\newcommand{\xesstblhdr}{\rowfont{\color{white}\bfseries}\rowcolor{black}}
+\newcommand{\xesstblsubhdr}{\rowfont{\color{white}\bfseries}\rowcolor{gray}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make chapter heading with chapter number in solid-color box.
+\makechapterstyle{XessChpStyle}
+{
+	%\renewcommand{\chapnamefont}{\large\scshape}
+	%\renewcommand{\chapnumfont}{\Huge\bfseries}
+	%\renewcommand{\chaptitlefont}{\raggedright\Huge\bfseries}
+	\setlength{\beforechapskip}{1.35in}
+	\setlength{\midchapskip}{0pt}
+	\setlength{\afterchapskip}{\baselineskip}
+	\renewcommand{\printchaptername}{}
+	\renewcommand{\chapternamenum}{}
+	\renewcommand{\printchapternum}{}
+	\renewcommand{\printchapternonum}{}
+	\renewcommand{\afterchapternum}{}
+	\renewcommand{\printchaptertitle}[1]
+	{
+		\thispagestyle{startchapterpagestyle} % Override normal page style on chapter start.
+		
+		\def\chapboxht{0.7in} % Height of box enclosing chapter number and title.
+		\def\stickout{1.0in} % How much the chapter box pokes into left margin.
+		\def\chapboxwd{\textwidth+\stickout} % Width of chapter box.
+		\def\chapnumwd{1.0in} % Width of box containing chapter number.
+		\def\chaptitlepad{0.2in} % Space between title text and left/right ends of its box.
+		\def\chapfntsz{36pt} % Chapter font size.
+		\def\chaplinespc{1.2\chapfntsz} % Chapter line spacing.
+		\setlength{\arrayrulewidth}{.1em} % Width of lines making box.
+		\setlength{\tabcolsep}{0pt}
+		\fontsize{\chapfntsz}{\chaplinespc}\bfseries\itshape\raggedright
+		% Make a box of width equal to the text body in which a table with a width of
+		% the text body + stickout will be placed. By right-justifying the table, its
+		% left side will poke into the left margin.
+		\makebox[\textwidth][r]
+		{%
+			\hss% Infinitely stretchable glue on the left so it can stretch into left margin.
+			% The table has three columns: one for the chapter number, the next for the
+			% chapter title, and the last containing a rule that pads the title and sets
+			% the height of the chapter box.
+			\begin{tabular}{m{\chapnumwd}
+							m{\chapboxwd-\chapnumwd-\chaptitlepad-6\tabcolsep}
+							m{\chaptitlepad}|}
+				\hline % Top side of chapter box.
+				% Chapter number cell of table.
+				\cellcolor{black}\color{white}% Reverse coloring for chapter number.
+				\hspace*{\fill}\cellcolor{black}\color{white}\thechapter\hspace*{\fill}	&
+				% Chapter title cell of table.
+				\makebox[\chaptitlepad]{}% Left-side padding of chapter title.
+				\color{black}{##1} &
+				% Right-side padding and chapter box height cell of table.
+				\rule{0pt}{\chapboxht} % Pad the right side of title and set box height.
+				\\
+				\hline % Bottom side of chapter box
+			\end{tabular}%
+		}%
+	}
+}
+\chapterstyle{XessChpStyle}
+
+\setsecnumdepth{chapter} % Don't number any sections below the chapters.
+\setsecnumformat{\rule{0pt}{0pt}} % This keeps \quad from being injected before section title.
+
+% Section formating.
+\setsecindent{0.0in} % Keeps section title from being indented. Actual indent is applied below.
+\setbeforesecskip{2\baselineskip}
+\setaftersecskip{\baselineskip}
+\newcommand{\xssecstyle}[1]
+{%
+	\def\secboxht{0.3in} % Height of box enclosing section title.
+	\def\stickout{1.0in} % How much the section box pokes into left margin.
+	\def\secboxwd{\textwidth+\stickout} % Width of section box.
+	\def\sectitlepad{0.13in} % Space between title text and left/right ends of its box.
+	\def\secfntsz{15pt} % Section font size.
+	\def\seclinespc{1.2\secfntsz} % Section title line spacing.
+	\setlength{\tabcolsep}{0pt}
+	\fontsize{\secfntsz}{\seclinespc}\bfseries\raggedright
+	\makebox[\textwidth][r]
+	{%
+		\hss% Infinitely stretchable glue on the left so it can stretch into left margin.
+		\begin{tabular}{m{\secboxwd-\sectitlepad-4\tabcolsep}
+						m{\sectitlepad}}
+			%\cellcolor{black}\color{red}{#1}\rule[-12pt]{0pt}{36pt}\\%
+			%\rule{0pt}{12pt}\\%
+			% Section title cell of table.
+			\cellcolor{black}%
+			\makebox[\sectitlepad]{}% Left-side padding of section title.
+			\color{white}{#1} &
+			% Right-side padding and chapter box height cell of table.
+			\cellcolor{black}%
+			\rule{0pt}{\secboxht} % Pad the right side of title and set box height.
+			\\
+		\end{tabular}%
+	}%
+}
+\setsecheadstyle{\xssecstyle}
+
+% Subsection formating.
+\setsubsecindent{-0.5in} % Subsection title sticks out into left margin.
+\setbeforesubsecskip{\baselineskip}
+\setaftersubsecskip{1pt}
+\newfontfamily{\subsecfont}{Arial Narrow}
+\def\subsecfntsz{14pt}
+\def\subseclinespc{1.2\subsecfntsz} % Section title line spacing.
+\setsubsecheadstyle{\fontsize{\subsecfntsz}{\subseclinespc}\subsecfont\bfseries\raggedright}
+
+% Subsubsection formating.
+\setsubsubsecindent{0.0in}
+\setbeforesubsubsecskip{\baselineskip}
+\setaftersubsubsecskip{1pt}
+\newfontfamily{\subsubsecfont}{Arial Narrow}
+\def\subsubsecfntsz{12pt}
+\def\subsubseclinespc{1.2\subsubsecfntsz} % Section title line spacing.
+\setsubsubsecheadstyle{\fontsize{\subsubsecfntsz}{\subsubseclinespc}\subsubsecfont\bfseries\itshape\raggedright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Environment for the XESS document title page.
+\newenvironment{xesstitlepage}
+{
+	\newcommand{\pushright}{\hspace*{\fill}}  % Pushes other stuff to the right.
+
+	% Thick rule below XESS logo going across top of title page.
+	\renewcommand{\toprule}{\noindent\makebox[\linewidth]{\rule{\textwidth}{5pt}}}
+	
+	% Title and subtitle fonts.
+	\newfontfamily{\titlefont}{Arial}
+	\newcommand{\usetitlefont}[1]{\fontsize{36pt}{43pt}\bfseries\titlefont ##1}
+	\newfontfamily{\subtitlefont}{Gentium Book Basic}
+	\newcommand{\usesubtitlefont}[1]{\fontsize{20pt}{24pt}\itshape\subtitlefont ##1}
+
+	% Create the title.
+	\renewcommand{\maketitle}
+	{
+		\pushright\parbox[t]{\textwidth}%
+		{
+			\begin{flushright}%
+				\usetitlefont{\doctitle}%
+			\end{flushright}%
+		}
+	}
+
+	% Create the subtitle.
+	\newcommand{\makesubtitle}
+	{
+		\pushright\parbox[t]{\textwidth}%
+		{
+			\begin{flushright}%
+				\usesubtitlefont{\docsubtitle}%
+			\end{flushright}%
+		}
+	}
+
+	% Define the title page layout.
+	\newgeometry
+	{
+		includeall,
+		headheight=0in, headsep=0in,
+		marginparsep=0in, marginparwidth=0in,
+		margin=0.75in, top=0.3in, bottom=0.5in
+	}
+	
+	% Define and activate the title page style, particularly the footer.
+	\makepagestyle{titlepage}  % Start with empty page style.
+	\makefootrule{titlepage}{\textwidth}{\headfootrulethickness}{0pt}
+	\makeoddfoot{titlepage}
+		{}
+		{}
+		{\usefooterfont\docnum, \docversion, \today}
+	\thispagestyle{titlepage}
+	
+	% Paragraphs on title page have no indentation.
+	\setlength\parindent{0pt}
+	\noindent\ignorespaces
+}
+{
+	\restoregeometry	 % Restore the page layout in effect before the title page.
+	\clearpage           % Start new page after title page.
+	\setcounter{page}{1} % Reset page numbering.
+	\ignorespacesafterend 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Command for instantiating an XESS manual title page.
+%   Arg #1: product image file name.
+%   Arg #2: image scaling factor with relation to \textwidth.
+\newcommand{\makexessmanualtitlepage}[2]
+{
+	\begin{xesstitlepage}
+	
+		\includegraphics[width=2in]{\xesscorplogo}\\    % XESS logo.
+		\toprule\\                                      % Rule across page.
+		\vspace{0.0in}\\
+	    \maketitle\\                                    % Title.
+		\vspace{0.0in}\\
+	    \makesubtitle\\                                 % Subtitle.
+		\vspace*{\fill}\\
+		
+		% Title page product picture in lower-left corner.
+		\begin{tikzpicture}[remember picture, overlay]
+		    \node[anchor=south west] at (current page text area.south west) {
+		        \includegraphics[width=#2\textwidth]{#1}
+		    };
+		\end{tikzpicture}
+
+	\end{xesstitlepage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Front matter page style.
+\newenvironment{xessfrontmatter}
+{
+	\thispagestyle{frontmatterpagestyle}
+	\noindent\ignorespaces%
+}
+{
+	\clearpage
+	\setcounter{page}{1}
+	\ignorespacesafterend
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Legal: disclaimers, copyright, etc.
+
+% Arg #1: year of copyright.
+\newcommand{\xesslegaltext}[1]{%
+XESS is disclosing this Document and Intellectual Property 
+(hereinafter “the Design”) to you for use in the development 
+of designs to operate on, or interface with XESS hardware devices. 
+XESS expressly disclaims any liability arising out of the application 
+or use of the Design. XESS reserves the right to make changes, 
+at any time, to the Design as deemed desirable in the sole discretion 
+of XESS. XESS assumes no obligation to correct any errors contained 
+herein or to advise you of any correction if such be made. XESS will 
+not assume any liability for the accuracy or correctness of any 
+engineering or technical support or assistance provided to you 
+in connection with the Design.
+
+THE DESIGN IS PROVIDED “AS IS” WITH ALL FAULTS, AND THE ENTIRE RISK 
+AS TO ITS FUNCTION AND IMPLEMENTATION IS WITH YOU. YOU ACKNOWLEDGE 
+AND AGREE THAT YOU HAVE NOT RELIED ON ANY ORAL OR WRITTEN INFORMATION 
+OR ADVICE, WHETHER GIVEN BY XESS, OR ITS AGENTS OR EMPLOYEES. 
+XESS MAKES NO OTHER WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, 
+REGARDING THE DESIGN, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NONINFRINGEMENT OF 
+THIRD-PARTY RIGHTS.
+
+IN NO EVENT WILL XESS BE LIABLE FOR ANY CONSEQUENTIAL, INDIRECT, 
+EXEMPLARY, SPECIAL, OR INCIDENTAL DAMAGES, INCLUDING ANY LOST DATA 
+AND LOST PROFITS, ARISING FROM OR RELATING TO YOUR USE OF THE DESIGN, 
+EVEN IF YOU HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+THE TOTAL CUMULATIVE LIABILITY OF XESS IN CONNECTION WITH YOUR USE 
+OF THE DESIGN, WHETHER IN CONTRACT OR TORT OR OTHERWISE, WILL IN NO 
+EVENT EXCEED THE AMOUNT OF FEES PAID BY YOU TO XESS HEREUNDER FOR 
+USE OF THE DESIGN. YOU ACKNOWLEDGE THAT THE FEES, IF ANY, REFLECT 
+THE ALLOCATION OF RISK SET FORTH IN THIS AGREEMENT AND THAT XESS 
+WOULD NOT MAKE AVAILABLE THE DESIGN TO YOU WITHOUT THESE LIMITATIONS 
+OF LIABILITY.
+
+The Design is not designed or intended for use in the development 
+of on-line control equipment in hazardous environments requiring 
+fail-safe controls, such as in the operation of nuclear facilities, 
+aircraft navigation or communications systems, air traffic control, 
+life support, or weapons systems (“High-Risk Applications”). 
+XESS specifically disclaims any express or implied warranties of 
+fitness for such High-Risk Applications. You represent that use 
+of the Design in such High-Risk Applications is fully at your risk.
+
+\textcopyright #1 XESS, Inc. XESS, the XESS logo, and other 
+designated brands included herein are trademarks of XESS Corporation. 
+\digpmodtm\ is a trademark of Digilent Inc. 
+All other trademarks are the property of their respective owners.
+
+\parbox[t]{1.3in}{
+	\hrule height 0pt width 0pt
+	\includegraphics[width=1.3in]{CC-BY-SA_icon.png}}
+\hfill
+\parbox[t]{1.0\textwidth - 1.5in}{
+	\hrule height 0pt width 0pt
+	This document is licensed under the Attribution-ShareAlike 3.0 
+	Unported license, available at http://creativecommons.org/licenses/by-sa/3.0/.}
+}
+
+\newenvironment{xesslegal}
+{
+	\begin{xessfrontmatter}
+	\newfontfamily{\legalfont}{Arial Narrow}%
+	\fontsize{10pt}{12pt}\legalfont
+}
+{
+	\end{xessfrontmatter}
+}
+
+% Arg #1: year of copyright.
+\newcommand{\makexesslegal}[1]{\begin{xesslegal}\xesslegaltext{#1}\end{xesslegal}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Revision table.
+
+% Environment for a document revision table
+\newenvironment{xessrevisiontbl}
+{
+	\begin{xessfrontmatter}
+	\newfontfamily{\revtblfont}{Arial}%
+	\fontsize{12pt}{14pt}\revtblfont%
+	{\large\bfseries Document Revision History}
+
+	\begin{flushleft}
+	\renewcommand\arraystretch{1.3}
+	\setlength{\tabcolsep}{0.0in}
+	\begin{tabu}{>{\centering}m{0.15\textwidth}>{\centering}m{0.15\textwidth}m{0.70\textwidth}}
+	\hline
+	\xesstblhdr
+	Date & Version & Revision \\
+	\hline
+}
+{
+	\hline
+	\end{tabu}
+	\end{flushleft}
+	\end{xessfrontmatter}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of contents.
+
+\newenvironment{xesstoc}
+{
+	\begin{xessfrontmatter}
+	\setcounter{tocdepth}{10}
+	\renewcommand\contentsname{Contents}
+}
+{
+	\end{xessfrontmatter}
+}
+
+\newcommand{\makexesstoc}%
+{%
+	\begin{xesstoc}
+		\tableofcontents*
+	\end{xesstoc}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperlink setup.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup
+{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=blue,
+	filecolor=blue,
+	urlcolor=blue
+}
+\urlstyle{same} % URLs printed in same font as the rest of document.

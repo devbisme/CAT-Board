@@ -1,4 +1,4 @@
-update=09/09/2015 7:43:55 PM
+update=10/07/2015 9:52:53 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -26,16 +26,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=50
 [eeschema]
 version=1
 LibDir=C:/xesscorp/KiCad/libraries
@@ -77,3 +67,13 @@ LibName34=xilinx7
 LibName35=xilinx6v
 LibName36=xilinx6s
 LibName37=xula
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=50
