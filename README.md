@@ -32,4 +32,4 @@ The CAT Board is a Raspberry Pi HAT with a Lattice iCE40HX FPGA.
 [ CAT Schematic ](https://raw.githubusercontent.com/xesscorp/CAT-Board/master/docs/Manual/pics/CAT_schematic.pdf)
 
 ![ CAT Picture ](https://raw.githubusercontent.com/xesscorp/CAT-Board/master/docs/Manual/pics/CAT_cover.jpg)
-![ CAT PCB ](https://raw.githubusercontent.com/xesscorp/CAT-Board/master/docs/Manual/pics/CAT_pcb.jpg)
+![ CAT PCB ](https://raw.githubusercontent.com/xesscorp/CAT-Board/master/docs/Manual/pics/CAT_pcb.JPG)
