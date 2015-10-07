@@ -6,7 +6,7 @@
 The CAT Board is a Raspberry Pi HAT with a Lattice iCE40HX FPGA.
 
 * License: [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/legalcode)
-* Documentation: [CAT.readthedocs.org](https://CAT-Board.readthedocs.org)
+* Documentation: [CAT-Board.readthedocs.org](https://CAT-Board.readthedocs.org)
 
 
 # Features
