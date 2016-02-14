@@ -1,0 +1,70 @@
+# ##############################################################################
+
+# iCEcube PCF
+
+# Version:            2015.08.27744
+
+# File Generated:     Feb 7 2016 11:06:54
+
+# Family & Device:    iCE40HX8K
+
+# Package:            CT256
+
+# ##############################################################################
+
+###IOSet List 54
+set_io led_status[3] B7
+set_io sdramCntl_inst_sd_intf_dq[7] K14
+set_io sdramCntl_inst_sd_intf_addr[12] G14
+set_io sdramCntl_inst_sd_intf_addr[7] D16
+set_io sdramCntl_inst_sd_intf_cke G15 -pullup yes
+set_io sdramCntl_inst_sd_intf_dq[0] R14
+set_io sdramCntl_inst_sd_intf_dq[12] N16
+set_io sdram_clk_i H16
+set_io sdramCntl_inst_sd_intf_addr[8] E16
+set_io sdramCntl_inst_sd_intf_dq[15] R15
+set_io sdramCntl_inst_sd_intf_dq[9] L16
+set_io sdramCntl_inst_sd_intf_dqml J13
+set_io sdramCntl_inst_sd_intf_addr[1] E14
+set_io sdramCntl_inst_sd_intf_bs[0] H14
+set_io sdramCntl_inst_sd_intf_dq[2] M13
+set_io sdram_clk_o G16
+set_io sdramCntl_inst_sd_intf_addr[3] D14
+set_io sdramCntl_inst_sd_intf_dq[4] L13
+set_io sdramCntl_inst_sd_intf_we J14
+set_io led_disp_d1_o B10
+set_io led_disp_d2_o B12
+set_io led_disp_d3_o B11
+set_io led_status[1] B8
+set_io pb_i A16 -pullup yes
+set_io sdramCntl_inst_sd_intf_addr[11] F16
+set_io sdramCntl_inst_sd_intf_addr[4] B16
+set_io sdramCntl_inst_sd_intf_cas K15
+set_io sdramCntl_inst_sd_intf_cs H13 -pullup yes
+set_io sdramCntl_inst_sd_intf_dq[11] M15
+set_io sdramCntl_inst_sd_intf_dq[5] L14
+set_io sdramCntl_inst_sd_intf_dqmh J15
+set_io led_status[0] A9
+set_io sdramCntl_inst_sd_intf_addr[10] F14
+set_io sdramCntl_inst_sd_intf_addr[5] C16
+set_io sdramCntl_inst_sd_intf_dq[10] M16
+set_io sdramCntl_inst_sd_intf_dq[6] K13
+set_io led_disp_d0_o A11
+set_io led_disp_d4_o B14
+set_io led_disp_d5_o B13
+set_io sdramCntl_inst_sd_intf_addr[6] D15
+set_io sdramCntl_inst_sd_intf_dq[13] P16
+set_io led_status[2] A7
+set_io sdramCntl_inst_sd_intf_dq[8] J16
+set_io master_clk_i C8
+set_io sdramCntl_inst_sd_intf_addr[0] F13
+set_io sdramCntl_inst_sd_intf_dq[1] P14
+set_io sdramCntl_inst_sd_intf_addr[9] F15
+set_io sdramCntl_inst_sd_intf_dq[14] P15
+set_io sdramCntl_inst_sd_intf_ras K16
+set_io led_disp_d6_o B15
+set_io led_disp_d7_o A15
+set_io sdramCntl_inst_sd_intf_addr[2] E13
+set_io sdramCntl_inst_sd_intf_bs[1] G13
+set_io sdramCntl_inst_sd_intf_dq[3] M14
+
