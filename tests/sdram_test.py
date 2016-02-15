@@ -158,30 +158,24 @@ def sdram_test(master_clk_i, sdram_clk_o, sdram_clk_i, led_disp_d0_o,
     sdramCntl_inst = MySdramCntl(clk, host_intf_inst, sd_intf)
 
     # LED display for showing test status.
-    space = 0x20  # ASCII code for space character.
-    led_disp_drvrs = [TristateSignal(bool(0)) for _ in range(8)]
-    led_disp_inst = led_digits_display(
-        led_disp_drvrs[0], led_disp_drvrs[1], led_disp_drvrs[2],
-        led_disp_drvrs[3], led_disp_drvrs[4], led_disp_drvrs[5],
-        led_disp_drvrs[6], led_disp_drvrs[7], clk, test_status, 
-        test_status, test_status, test_status, test_status, test_status, test_status, test_status, 
-        enable_ascii_to_7seg=True)
+    # space = 0x20  # ASCII code for space character.
+    # led_disp_drvrs = [TristateSignal(bool(0)) for _ in range(8)]
     # led_disp_inst = led_digits_display(
         # led_disp_drvrs[0], led_disp_drvrs[1], led_disp_drvrs[2],
         # led_disp_drvrs[3], led_disp_drvrs[4], led_disp_drvrs[5],
         # led_disp_drvrs[6], led_disp_drvrs[7], clk, test_status, space, space,
         # space, space, space, space, space, enable_ascii_to_7seg=True)
 
-    @always_comb
-    def led_disp_connect():
-        led_disp_d0_o.next = led_disp_drvrs[0]
-        led_disp_d1_o.next = led_disp_drvrs[1]
-        led_disp_d2_o.next = led_disp_drvrs[2]
-        led_disp_d3_o.next = led_disp_drvrs[3]
-        led_disp_d4_o.next = led_disp_drvrs[4]
-        led_disp_d5_o.next = led_disp_drvrs[5]
-        led_disp_d6_o.next = led_disp_drvrs[6]
-        led_disp_d7_o.next = led_disp_drvrs[7]
+    # @always_comb
+    # def led_disp_connect():
+        # led_disp_d0_o.next = led_disp_drvrs[0]
+        # led_disp_d1_o.next = led_disp_drvrs[1]
+        # led_disp_d2_o.next = led_disp_drvrs[2]
+        # led_disp_d3_o.next = led_disp_drvrs[3]
+        # led_disp_d4_o.next = led_disp_drvrs[4]
+        # led_disp_d5_o.next = led_disp_drvrs[5]
+        # led_disp_d6_o.next = led_disp_drvrs[6]
+        # led_disp_d7_o.next = led_disp_drvrs[7]
 
     return instances()
 
