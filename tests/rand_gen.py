@@ -356,4 +356,6 @@ if __name__ == '__main__':
     # load = Signal(bool(0))
     # seed = Signal(intbv(0)[16:])
     # rand = Signal(intbv(0)[16:])
-    # toVHDL(uniform_rand_gen, clk, enbl, load, seed, rand)
+    # toVerilog(uniform_rand_gen, clk, enbl, load, seed, rand)
+    # toVerilog(xorshift_rand_gen, clk, enbl, load, seed, rand)
+    # toVerilog(normal_rand_gen, clk, enbl, load, seed, rand)
