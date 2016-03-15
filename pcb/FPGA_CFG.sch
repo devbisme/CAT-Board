@@ -43,10 +43,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "CAT HAT"
-Date "2015-09-09"
-Rev "0.1"
+Date "2016-03-14"
+Rev "0.2"
 Comp "XESS Corp."
-Comment1 "(c) 2015"
+Comment1 "(c) 2015 - 2016"
 Comment2 "OSHW"
 Comment3 "CC BY 4.0"
 Comment4 ""
@@ -140,17 +140,17 @@ $EndComp
 Text GLabel 4850 3100 1    50   Input ~ 0
 +3.3V
 Wire Wire Line
-	4600 3600 5600 3600
+	4000 3600 5600 3600
 Wire Wire Line
 	4950 5200 6700 5200
 Wire Wire Line
 	6700 5200 6700 5000
 Wire Wire Line
-	4600 3500 5600 3500
+	4000 3500 5600 3500
 Wire Wire Line
 	5050 4800 5600 4800
 Wire Wire Line
-	4600 3700 5600 3700
+	4000 3700 5600 3700
 Wire Wire Line
 	4850 3400 4850 5300
 Wire Wire Line
@@ -161,17 +161,17 @@ Wire Wire Line
 	6800 4900 6700 4900
 Connection ~ 4850 3700
 Wire Wire Line
-	4600 3800 5600 3800
+	4000 3800 5600 3800
 Wire Wire Line
 	5150 3400 5150 4700
 Wire Wire Line
 	5150 4700 5600 4700
 Connection ~ 5150 3800
-Text GLabel 4600 3700 0    50   Input ~ 0
+Text GLabel 3700 3700 0    50   Input ~ 0
 BCM11_SCLK
-Text GLabel 4600 3500 0    50   Output ~ 0
+Text GLabel 3700 3500 0    50   Output ~ 0
 BCM9_MISO
-Text GLabel 4600 3600 0    50   Input ~ 0
+Text GLabel 3700 3600 0    50   Input ~ 0
 BCM10_MOSI
 $Comp
 L RN2 RN3
@@ -195,7 +195,7 @@ F 3 "" H 5150 3400 50  0000 C CNN
 	2    5150 3400
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4600 3800 0    50   Input ~ 0
+Text GLabel 3700 3800 0    50   Input ~ 0
 BCM25
 $Bitmap
 Pos 9850 6850
@@ -3574,4 +3574,48 @@ Connection ~ 4950 3500
 Wire Wire Line
 	5050 4800 5050 3600
 Connection ~ 5050 3600
+$Comp
+L RN4 RN12
+U 1 1 56E77223
+P 3700 3600
+F 0 "RN12" H 4100 3650 50  0000 C CNN
+F 1 "100" H 3850 3600 50  0000 C CNN
+F 2 "XESS:CTS_742C083" H 3700 3600 50  0001 C CNN
+F 3 "" H 3700 3600 50  0000 C CNN
+	1    3700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L RN4 RN12
+U 2 1 56E7725F
+P 3700 3500
+F 0 "RN12" H 4100 3550 50  0000 C CNN
+F 1 "100" H 3850 3500 50  0000 C CNN
+F 2 "XESS:CTS_742C083" H 3700 3500 50  0001 C CNN
+F 3 "" H 3700 3500 50  0000 C CNN
+	2    3700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L RN4 RN12
+U 3 1 56E772A7
+P 3700 3800
+F 0 "RN12" H 4100 3850 50  0000 C CNN
+F 1 "100" H 3850 3800 50  0000 C CNN
+F 2 "XESS:CTS_742C083" H 3700 3800 50  0001 C CNN
+F 3 "" H 3700 3800 50  0000 C CNN
+	3    3700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L RN4 RN12
+U 4 1 56E772F7
+P 3700 3700
+F 0 "RN12" H 4100 3750 50  0000 C CNN
+F 1 "100" H 3850 3700 50  0000 C CNN
+F 2 "XESS:CTS_742C083" H 3700 3700 50  0001 C CNN
+F 3 "" H 3700 3700 50  0000 C CNN
+	4    3700 3700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

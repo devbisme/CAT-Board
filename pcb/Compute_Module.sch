@@ -43,10 +43,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
 Title "CAT HAT"
-Date "2015-09-09"
-Rev "0.1"
+Date "2016-03-14"
+Rev "0.2"
 Comp "XESS Corp."
-Comment1 "(c) 2015"
+Comment1 "(c) 2015 - 2016"
 Comment2 "OSHW"
 Comment3 "CC BY 4.0"
 Comment4 ""
