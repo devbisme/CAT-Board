@@ -124,6 +124,7 @@ F 1 "0.1uF" H 4825 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4838 3700 30 0001 C CNN
 F 3 "" H 4800 3850 60 0000 C CNN
 F 4 "17" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4800 3850
 	1    0    0    -1  
 $EndComp
@@ -147,6 +148,7 @@ F 1 "1.0uF" H 5125 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5138 3700 30 0001 C CNN
 F 3 "" H 5100 3850 60 0000 C CNN
 F 4 "16" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    5100 3850
 	1    0    0    -1  
 $EndComp
@@ -170,6 +172,7 @@ F 1 "0.1uF" H 4225 4350 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4238 4300 30 0001 C CNN
 F 3 "" H 4200 4450 60 0000 C CNN
 F 4 "5" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4200 4450
 	1    0    0    -1  
 $EndComp
@@ -193,6 +196,7 @@ F 1 "1.0uF" H 4525 4350 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4538 4300 30 0001 C CNN
 F 3 "" H 4500 4450 60 0000 C CNN
 F 4 "12" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    4500 4450
 	1    0    0    -1  
 $EndComp
@@ -216,6 +220,7 @@ F 1 "0.1uF" H 4825 4350 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4838 4300 30 0001 C CNN
 F 3 "" H 4800 4450 60 0000 C CNN
 F 4 "32" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4800 4450
 	1    0    0    -1  
 $EndComp
@@ -239,6 +244,7 @@ F 1 "1.0uF" H 5125 4350 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5138 4300 30 0001 C CNN
 F 3 "" H 5100 4450 60 0000 C CNN
 F 4 "35" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    5100 4450
 	1    0    0    -1  
 $EndComp
@@ -262,6 +268,7 @@ F 1 "0.1uF" H 4225 4950 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4238 4900 30 0001 C CNN
 F 3 "" H 4200 5050 60 0000 C CNN
 F 4 "29" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4200 5050
 	1    0    0    -1  
 $EndComp
@@ -285,6 +292,7 @@ F 1 "1.0uF" H 4525 4950 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4538 4900 30 0001 C CNN
 F 3 "" H 4500 5050 60 0000 C CNN
 F 4 "28" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    4500 5050
 	1    0    0    -1  
 $EndComp
@@ -308,6 +316,7 @@ F 1 "0.1uF" H 4825 4950 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4838 4900 30 0001 C CNN
 F 3 "" H 4800 5050 60 0000 C CNN
 F 4 "30" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4800 5050
 	1    0    0    -1  
 $EndComp
@@ -331,6 +340,7 @@ F 1 "1.0uF" H 5125 4950 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5138 4900 30 0001 C CNN
 F 3 "" H 5100 5050 60 0000 C CNN
 F 4 "26" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    5100 5050
 	1    0    0    -1  
 $EndComp
@@ -354,6 +364,7 @@ F 1 "0.1uF" H 4225 5550 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4238 5500 30 0001 C CNN
 F 3 "" H 4200 5650 60 0000 C CNN
 F 4 "24" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4200 5650
 	1    0    0    -1  
 $EndComp
@@ -377,6 +388,7 @@ F 1 "1.0uF" H 4525 5550 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4538 5500 30 0001 C CNN
 F 3 "" H 4500 5650 60 0000 C CNN
 F 4 "23" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    4500 5650
 	1    0    0    -1  
 $EndComp
@@ -400,6 +412,7 @@ F 1 "0.1uF" H 4825 5550 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4838 5500 30 0001 C CNN
 F 3 "" H 4800 5650 60 0000 C CNN
 F 4 "21" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    4800 5650
 	1    0    0    -1  
 $EndComp
@@ -423,6 +436,7 @@ F 1 "1.0uF" H 5125 5550 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5138 5500 30 0001 C CNN
 F 3 "" H 5100 5650 60 0000 C CNN
 F 4 "20" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    5100 5650
 	1    0    0    -1  
 $EndComp
@@ -446,6 +460,7 @@ F 1 "0.1uF" H 5575 1750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5588 1700 30 0001 C CNN
 F 3 "" H 5550 1850 60 0000 C CNN
 F 4 "6" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    5550 1850
 	1    0    0    -1  
 $EndComp
@@ -458,6 +473,7 @@ F 1 "10uF" H 5325 1750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 5338 1700 30 0001 C CNN
 F 3 "" H 5300 1850 60 0000 C CNN
 F 4 "27" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM21BR61A106KE19L" H 0 0 50 0001 C CNN "manf#"
 	1    5300 1850
 	1    0    0    -1  
 $EndComp
@@ -470,6 +486,7 @@ F 1 "0.1uF" H 5575 2250 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5588 2200 30 0001 C CNN
 F 3 "" H 5550 2350 60 0000 C CNN
 F 4 "11" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    5550 2350
 	1    0    0    -1  
 $EndComp
@@ -482,6 +499,7 @@ F 1 "10uF" H 5325 2250 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 5338 2200 30 0001 C CNN
 F 3 "" H 5300 2350 60 0000 C CNN
 F 4 "10" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM21BR61A106KE19L" H 0 0 50 0001 C CNN "manf#"
 	1    5300 2350
 	1    0    0    -1  
 $EndComp
@@ -507,6 +525,7 @@ F 1 "1.0uF" H 6825 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 6838 3700 30 0001 C CNN
 F 3 "" H 6800 3850 60 0000 C CNN
 F 4 "22" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    6800 3850
 	1    0    0    -1  
 $EndComp
@@ -530,6 +549,7 @@ F 1 "0.1uF" H 7125 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 7138 3700 30 0001 C CNN
 F 3 "" H 7100 3850 60 0000 C CNN
 F 4 "9" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    7100 3850
 	1    0    0    -1  
 $EndComp
@@ -553,6 +573,7 @@ F 1 "0.1uF" H 7425 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 7438 3700 30 0001 C CNN
 F 3 "" H 7400 3850 60 0000 C CNN
 F 4 "7" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    7400 3850
 	1    0    0    -1  
 $EndComp
@@ -576,6 +597,7 @@ F 1 "0.1uF" H 7725 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 7738 3700 30 0001 C CNN
 F 3 "" H 7700 3850 60 0000 C CNN
 F 4 "4" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    7700 3850
 	1    0    0    -1  
 $EndComp
@@ -599,6 +621,7 @@ F 1 "0.1uF" H 8025 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 8038 3700 30 0001 C CNN
 F 3 "" H 8000 3850 60 0000 C CNN
 F 4 "31" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    8000 3850
 	1    0    0    -1  
 $EndComp
@@ -622,6 +645,7 @@ F 1 "0.01uF" H 8325 3750 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 8338 3700 30 0001 C CNN
 F 3 "" H 8300 3850 60 0000 C CNN
 F 4 "3" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71H103KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    8300 3850
 	1    0    0    -1  
 $EndComp
@@ -645,6 +669,7 @@ F 1 "1.0uF" H 6825 4350 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 6838 4300 30 0001 C CNN
 F 3 "" H 6800 4450 60 0000 C CNN
 F 4 "15" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C105KE15D" H 0 0 50 0001 C CNN "manf#"
 	1    6800 4450
 	1    0    0    -1  
 $EndComp
@@ -668,6 +693,7 @@ F 1 "0.1uF" H 7125 4350 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 7138 4300 30 0001 C CNN
 F 3 "" H 7100 4450 60 0000 C CNN
 F 4 "14" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 0 0 50 0001 C CNN "manf#"
 	1    7100 4450
 	1    0    0    -1  
 $EndComp
@@ -715,6 +741,7 @@ F 1 "100" V 5150 2000 50 0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 5080 2000 30 0001 C CNN
 F 3 "" H 5150 2000 30 0000 C CNN
 F 4 "33" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "RC0603JR-07100RL" H 0 0 50 0001 C CNN "manf#"
 	1    5150 2000
 	0    1    1    0   
 $EndComp
@@ -727,6 +754,7 @@ F 1 "100" V 5150 2500 50 0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 5080 2500 30 0001 C CNN
 F 3 "" H 5150 2500 30 0000 C CNN
 F 4 "8" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "RC0603JR-07100RL" H 0 0 50 0001 C CNN "manf#"
 	1    5150 2500
 	0    1    1    0   
 $EndComp
@@ -807,6 +835,7 @@ F 1 "10uF" H 3675 5550 50 0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 3688 5500 30 0001 C CNN
 F 3 "" H 3650 5650 60 0000 C CNN
 F 4 "45" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM21BR61A106KE19L" H 0 0 50 0001 C CNN "manf#"
 	1    3650 5650
 	1    0    0    -1  
 $EndComp
