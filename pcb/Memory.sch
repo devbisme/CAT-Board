@@ -55,130 +55,25 @@ $Comp
 L SDRAM U5
 U 1 1 55E88707
 P 5500 2500
-F 0 "U5" H 5700 2750 60  0000 L CNN
-F 1 "16Mx16 SDRAM" H 5700 2650 60  0000 L CNN
-F 2 "XESS:TSOPII-54" H 5500 2500 60  0001 C CNN
-F 3 "" H 5500 2500 60  0000 C CNN
-F 4 "AS4C16M16S-6TCN" H 5500 2500 60  0001 C CNN "manf#"
-F 5 "Alliance Memory Inc." H 5500 2500 60  0001 C CNN "manf"
+F 0 "U5" H 5700 2750 60 0000 L CNN
+F 1 "16Mx16 SDRAM" H 5700 2650 60 0000 L CNN
+F 2 "XESS:TSOPII-54" H 5500 2500 60 0001 C CNN
+F 3 "" H 5500 2500 60 0000 C CNN
+F 4 "65" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "Alliance Memory Inc." H 5500 2500 60 0001 C CNN "manf"
+F 6 "AS4C16M16S-6TCN" H 5500 2500 60 0001 C CNN "manf#"
 	1    5500 2500
 	1    0    0    -1  
 $EndComp
-Text GLabel 5500 2500 0    50   Input ~ 0
-+3.3V
-Text GLabel 5500 2700 0    50   Input ~ 0
-+3.3V
-Text GLabel 5500 3300 0    50   Input ~ 0
-+3.3V
-Text GLabel 5500 3800 0    50   Input ~ 0
-+3.3V
-Text GLabel 5500 5100 0    50   Input ~ 0
-+3.3V
-Text GLabel 6600 3000 2    50   Input ~ 0
-+3.3V
-Text GLabel 6600 3600 2    50   Input ~ 0
-+3.3V
-Text GLabel 5500 3000 0    50   Input ~ 0
-GND
-Text GLabel 5500 3600 0    50   Input ~ 0
-GND
-Text GLabel 6600 5100 2    50   Input ~ 0
-GND
-Text GLabel 6600 3800 2    50   Input ~ 0
-GND
-Text GLabel 6600 3300 2    50   Input ~ 0
-GND
-Text GLabel 6600 2700 2    50   Input ~ 0
-GND
-Text GLabel 6600 2500 2    50   Input ~ 0
-GND
-Text GLabel 5500 2600 0    50   Input ~ 0
-SD_DQ0
-Text GLabel 5500 2800 0    50   Input ~ 0
-SD_DQ1
-Text GLabel 5500 2900 0    50   Input ~ 0
-SD_DQ2
-Text GLabel 5500 3100 0    50   Input ~ 0
-SD_DQ3
-Text GLabel 5500 3200 0    50   Input ~ 0
-SD_DQ4
-Text GLabel 5500 3400 0    50   Input ~ 0
-SD_DQ5
-Text GLabel 5500 3500 0    50   Input ~ 0
-SD_DQ6
-Text GLabel 5500 3700 0    50   Input ~ 0
-SD_DQ7
-Text GLabel 6600 3700 2    50   Input ~ 0
-SD_DQ8
-Text GLabel 6600 3500 2    50   Input ~ 0
-SD_DQ9
-Text GLabel 6600 3400 2    50   Input ~ 0
-SD_DQ10
-Text GLabel 6600 3200 2    50   Input ~ 0
-SD_DQ11
-Text GLabel 6600 3100 2    50   Input ~ 0
-SD_DQ12
-Text GLabel 6600 2900 2    50   Input ~ 0
-SD_DQ13
-Text GLabel 6600 2800 2    50   Input ~ 0
-SD_DQ14
-Text GLabel 6600 2600 2    50   Input ~ 0
-SD_DQ15
-Text GLabel 5500 4700 0    50   Input ~ 0
-SD_A0
-Text GLabel 5500 4800 0    50   Input ~ 0
-SD_A1
-Text GLabel 5500 4900 0    50   Input ~ 0
-SD_A2
-Text GLabel 5500 5000 0    50   Input ~ 0
-SD_A3
-Text GLabel 6600 5000 2    50   Input ~ 0
-SD_A4
-Text GLabel 6600 4900 2    50   Input ~ 0
-SD_A5
-Text GLabel 6600 4800 2    50   Input ~ 0
-SD_A6
-Text GLabel 6600 4700 2    50   Input ~ 0
-SD_A7
-Text GLabel 6600 4600 2    50   Input ~ 0
-SD_A8
-Text GLabel 6600 4500 2    50   Input ~ 0
-SD_A9
-Text GLabel 5500 4600 0    50   Input ~ 0
-SD_A10
-Text GLabel 6600 4400 2    50   Input ~ 0
-SD_A11
-Text GLabel 6600 4300 2    50   Input ~ 0
-SD_A12
-NoConn ~ 6600 3900
-Text GLabel 5500 3900 0    50   Input ~ 0
-SD_LDQM
-Text GLabel 6600 4000 2    50   Input ~ 0
-SD_UDQM
-Text GLabel 5500 4000 0    50   Input ~ 0
-~SD_WE
-Text GLabel 5500 4100 0    50   Input ~ 0
-~SD_CAS
-Text GLabel 5500 4200 0    50   Input ~ 0
-~SD_RAS
-Text GLabel 5500 4300 0    50   Input ~ 0
-~SD_CS
-Text GLabel 5500 4400 0    50   Input ~ 0
-SD_BS0
-Text GLabel 5500 4500 0    50   Input ~ 0
-SD_BS1
-Text GLabel 6600 4100 2    50   Input ~ 0
-SD_CLK
-Text GLabel 6600 4200 2    50   Input ~ 0
-SD_CKE
 $Comp
 L C C12
 U 1 1 55E9F330
 P 6350 5750
-F 0 "C12" H 6375 5850 50  0000 L CNN
-F 1 "0.1uF" H 6375 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6388 5600 30  0001 C CNN
-F 3 "" H 6350 5750 60  0000 C CNN
+F 0 "C12" H 6375 5850 50 0000 L CNN
+F 1 "0.1uF" H 6375 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6388 5600 30 0001 C CNN
+F 3 "" H 6350 5750 60 0000 C CNN
+F 4 "42" H 0 0 50 0001 C CNN "assembly_order"
 	1    6350 5750
 	1    0    0    -1  
 $EndComp
@@ -186,45 +81,36 @@ $Comp
 L C C13
 U 1 1 55E9F363
 P 6650 5750
-F 0 "C13" H 6675 5850 50  0000 L CNN
-F 1 "1.0uF" H 6675 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6688 5600 30  0001 C CNN
-F 3 "" H 6650 5750 60  0000 C CNN
+F 0 "C13" H 6675 5850 50 0000 L CNN
+F 1 "1.0uF" H 6675 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6688 5600 30 0001 C CNN
+F 3 "" H 6650 5750 60 0000 C CNN
+F 4 "37" H 0 0 50 0001 C CNN "assembly_order"
 	1    6650 5750
 	1    0    0    -1  
 $EndComp
-Text GLabel 6350 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 6350 5900 3    50   Input ~ 0
-GND
-Text GLabel 6650 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 6650 5900 3    50   Input ~ 0
-GND
 $Comp
 L C C14
 U 1 1 55E9F939
 P 6950 5750
-F 0 "C14" H 6975 5850 50  0000 L CNN
-F 1 "0.1uF" H 6975 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6988 5600 30  0001 C CNN
-F 3 "" H 6950 5750 60  0000 C CNN
+F 0 "C14" H 6975 5850 50 0000 L CNN
+F 1 "0.1uF" H 6975 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6988 5600 30 0001 C CNN
+F 3 "" H 6950 5750 60 0000 C CNN
+F 4 "40" H 0 0 50 0001 C CNN "assembly_order"
 	1    6950 5750
 	1    0    0    -1  
 $EndComp
-Text GLabel 6950 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 6950 5900 3    50   Input ~ 0
-GND
 $Comp
 L C C8
 U 1 1 55E9FAF7
 P 5150 5750
-F 0 "C8" H 5175 5850 50  0000 L CNN
-F 1 "0.1uF" H 5175 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5188 5600 30  0001 C CNN
-F 3 "" H 5150 5750 60  0000 C CNN
-F 4 "GRM188R71C104KA01D" H 5150 5750 60  0001 C CNN "manf#"
+F 0 "C8" H 5175 5850 50 0000 L CNN
+F 1 "0.1uF" H 5175 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5188 5600 30 0001 C CNN
+F 3 "" H 5150 5750 60 0000 C CNN
+F 4 "41" H 0 0 50 0001 C CNN "assembly_order"
+F 5 "GRM188R71C104KA01D" H 5150 5750 60 0001 C CNN "manf#"
 	1    5150 5750
 	1    0    0    -1  
 $EndComp
@@ -232,29 +118,23 @@ $Comp
 L C C9
 U 1 1 55E9FAFD
 P 5450 5750
-F 0 "C9" H 5475 5850 50  0000 L CNN
-F 1 "1.0uF" H 5475 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5488 5600 30  0001 C CNN
-F 3 "" H 5450 5750 60  0000 C CNN
+F 0 "C9" H 5475 5850 50 0000 L CNN
+F 1 "1.0uF" H 5475 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5488 5600 30 0001 C CNN
+F 3 "" H 5450 5750 60 0000 C CNN
+F 4 "39" H 0 0 50 0001 C CNN "assembly_order"
 	1    5450 5750
 	1    0    0    -1  
 $EndComp
-Text GLabel 5150 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 5150 5900 3    50   Input ~ 0
-GND
-Text GLabel 5450 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 5450 5900 3    50   Input ~ 0
-GND
 $Comp
 L C C10
 U 1 1 55E9FB07
 P 5750 5750
-F 0 "C10" H 5775 5850 50  0000 L CNN
-F 1 "0.1uF" H 5775 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 5788 5600 30  0001 C CNN
-F 3 "" H 5750 5750 60  0000 C CNN
+F 0 "C10" H 5775 5850 50 0000 L CNN
+F 1 "0.1uF" H 5775 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5788 5600 30 0001 C CNN
+F 3 "" H 5750 5750 60 0000 C CNN
+F 4 "36" H 0 0 50 0001 C CNN "assembly_order"
 	1    5750 5750
 	1    0    0    -1  
 $EndComp
@@ -262,21 +142,14 @@ $Comp
 L C C11
 U 1 1 55E9FB0D
 P 6050 5750
-F 0 "C11" H 6075 5850 50  0000 L CNN
-F 1 "1.0uF" H 6075 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6088 5600 30  0001 C CNN
-F 3 "" H 6050 5750 60  0000 C CNN
+F 0 "C11" H 6075 5850 50 0000 L CNN
+F 1 "1.0uF" H 6075 5650 50 0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6088 5600 30 0001 C CNN
+F 3 "" H 6050 5750 60 0000 C CNN
+F 4 "43" H 0 0 50 0001 C CNN "assembly_order"
 	1    6050 5750
 	1    0    0    -1  
 $EndComp
-Text GLabel 5750 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 5750 5900 3    50   Input ~ 0
-GND
-Text GLabel 6050 5600 1    50   Input ~ 0
-+3.3V
-Text GLabel 6050 5900 3    50   Input ~ 0
-GND
 $Bitmap
 Pos 9850 6850
 Scale 0.500000
@@ -2997,7 +2870,7 @@ BA 0E 42 08 21 84 10 42 88 A5 44 92 12 42 08 21 84 10 42 08 6F F8 54 BA 09 C0 AF
 D2 4D 07 BA 8E 63 3E 69 72 2D 84 10 42 08 21 44 3D 24 29 21 84 10 42 08 21 84 70 CA 70 F6 3C F8 
 55 BA E9 1E 45 C1 A5 AE 83 10 42 08 21 84 10 62 29 92 A4 84 10 42 08 21 84 10 C2 A9 94 F3 E7 B9 
 8E 61 2D AC 28 7C D0 75 10 42 08 21 84 10 42 2C 45 FF 1F 5C 99 D7 EB 78 7F 83 BD 00 00 00 00 49 
-45 4E 44 AE 42 60 82 00 
+45 4E 44 AE 42 60 82 3A 
 EndData
 $EndBitmap
 $Bitmap
@@ -3645,7 +3518,142 @@ EB 23 E6 AE 17 31 9C 4B AA 90 89 86 F4 7E E0 0E 60 5E D9 8D 4B 92 D4 23 F3 88 B9
 F4 01 E0 6E E0 A8 94 4E 25 49 2A CE 51 C4 1C D7 C9 7C 68 38 97 54 B8 4E 42 FA 32 E0 62 60 FB A4 
 1E 25 49 2A DA F6 C4 5C B7 0C C3 B9 A4 0A 98 09 FC 0D B0 92 CD 57 CD 1F 06 4E 04 26 A7 75 27 49 
 52 39 26 13 73 DE C3 6C BE 70 B5 12 F8 16 86 73 8D C3 FF 03 63 F8 EE 2E BE 9A 04 B1 00 00 00 00 
-49 45 4E 44 AE 42 60 82 5D 
+49 45 4E 44 AE 42 60 82 AE 
 EndData
 $EndBitmap
+Text GLabel 5500 2500 0    50   Input ~ 0
++3.3V
+Text GLabel 5500 2700 0    50   Input ~ 0
++3.3V
+Text GLabel 5500 3300 0    50   Input ~ 0
++3.3V
+Text GLabel 5500 3800 0    50   Input ~ 0
++3.3V
+Text GLabel 5500 5100 0    50   Input ~ 0
++3.3V
+Text GLabel 6600 3000 2    50   Input ~ 0
++3.3V
+Text GLabel 6600 3600 2    50   Input ~ 0
++3.3V
+Text GLabel 5500 3000 0    50   Input ~ 0
+GND
+Text GLabel 5500 3600 0    50   Input ~ 0
+GND
+Text GLabel 6600 5100 2    50   Input ~ 0
+GND
+Text GLabel 6600 3800 2    50   Input ~ 0
+GND
+Text GLabel 6600 3300 2    50   Input ~ 0
+GND
+Text GLabel 6600 2700 2    50   Input ~ 0
+GND
+Text GLabel 6600 2500 2    50   Input ~ 0
+GND
+Text GLabel 5500 2600 0    50   Input ~ 0
+SD_DQ0
+Text GLabel 5500 2800 0    50   Input ~ 0
+SD_DQ1
+Text GLabel 5500 2900 0    50   Input ~ 0
+SD_DQ2
+Text GLabel 5500 3100 0    50   Input ~ 0
+SD_DQ3
+Text GLabel 5500 3200 0    50   Input ~ 0
+SD_DQ4
+Text GLabel 5500 3400 0    50   Input ~ 0
+SD_DQ5
+Text GLabel 5500 3500 0    50   Input ~ 0
+SD_DQ6
+Text GLabel 5500 3700 0    50   Input ~ 0
+SD_DQ7
+Text GLabel 6600 3700 2    50   Input ~ 0
+SD_DQ8
+Text GLabel 6600 3500 2    50   Input ~ 0
+SD_DQ9
+Text GLabel 6600 3400 2    50   Input ~ 0
+SD_DQ10
+Text GLabel 6600 3200 2    50   Input ~ 0
+SD_DQ11
+Text GLabel 6600 3100 2    50   Input ~ 0
+SD_DQ12
+Text GLabel 6600 2900 2    50   Input ~ 0
+SD_DQ13
+Text GLabel 6600 2800 2    50   Input ~ 0
+SD_DQ14
+Text GLabel 6600 2600 2    50   Input ~ 0
+SD_DQ15
+Text GLabel 5500 4700 0    50   Input ~ 0
+SD_A0
+Text GLabel 5500 4800 0    50   Input ~ 0
+SD_A1
+Text GLabel 5500 4900 0    50   Input ~ 0
+SD_A2
+Text GLabel 5500 5000 0    50   Input ~ 0
+SD_A3
+Text GLabel 6600 5000 2    50   Input ~ 0
+SD_A4
+Text GLabel 6600 4900 2    50   Input ~ 0
+SD_A5
+Text GLabel 6600 4800 2    50   Input ~ 0
+SD_A6
+Text GLabel 6600 4700 2    50   Input ~ 0
+SD_A7
+Text GLabel 6600 4600 2    50   Input ~ 0
+SD_A8
+Text GLabel 6600 4500 2    50   Input ~ 0
+SD_A9
+Text GLabel 5500 4600 0    50   Input ~ 0
+SD_A10
+Text GLabel 6600 4400 2    50   Input ~ 0
+SD_A11
+Text GLabel 6600 4300 2    50   Input ~ 0
+SD_A12
+Text GLabel 5500 3900 0    50   Input ~ 0
+SD_LDQM
+Text GLabel 6600 4000 2    50   Input ~ 0
+SD_UDQM
+Text GLabel 5500 4000 0    50   Input ~ 0
+~SD_WE
+Text GLabel 5500 4100 0    50   Input ~ 0
+~SD_CAS
+Text GLabel 5500 4200 0    50   Input ~ 0
+~SD_RAS
+Text GLabel 5500 4300 0    50   Input ~ 0
+~SD_CS
+Text GLabel 5500 4400 0    50   Input ~ 0
+SD_BS0
+Text GLabel 5500 4500 0    50   Input ~ 0
+SD_BS1
+Text GLabel 6600 4100 2    50   Input ~ 0
+SD_CLK
+Text GLabel 6600 4200 2    50   Input ~ 0
+SD_CKE
+Text GLabel 6350 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 6350 5900 3    50   Input ~ 0
+GND
+Text GLabel 6650 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 6650 5900 3    50   Input ~ 0
+GND
+Text GLabel 6950 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 6950 5900 3    50   Input ~ 0
+GND
+Text GLabel 5150 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 5150 5900 3    50   Input ~ 0
+GND
+Text GLabel 5450 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 5450 5900 3    50   Input ~ 0
+GND
+Text GLabel 5750 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 5750 5900 3    50   Input ~ 0
+GND
+Text GLabel 6050 5600 1    50   Input ~ 0
++3.3V
+Text GLabel 6050 5900 3    50   Input ~ 0
+GND
+NoConn ~ 6600 3900
 $EndSCHEMATC

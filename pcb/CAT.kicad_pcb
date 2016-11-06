@@ -24,16 +24,16 @@
   )
 
   (layers
-    (0 F.Cu signal)
-    (1 In1.Cu signal)
+    (0 F.Cu signal hide)
+    (1 In1.Cu signal hide)
     (2 In2.Cu signal hide)
-    (31 B.Cu signal)
+    (31 B.Cu signal hide)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
     (34 B.Paste user hide)
     (35 F.Paste user hide)
     (36 B.SilkS user hide)
-    (37 F.SilkS user hide)
+    (37 F.SilkS user)
     (38 B.Mask user hide)
     (39 F.Mask user hide)
     (40 Dwgs.User user hide)
@@ -49,7 +49,7 @@
   )
 
   (setup
-    (last_trace_width 0.1524)
+    (last_trace_width 0.09999)
     (user_trace_width 0.09999)
     (user_trace_width 0.127)
     (user_trace_width 0.1524)
@@ -87,7 +87,7 @@
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 56.388)
     (grid_origin 0 0.508)
-    (visible_elements 7FFCEF1F)
+    (visible_elements 7FFC4A1F)
     (pcbplotparams
       (layerselection 0x010f0_ffffffff)
       (usegerberextensions true)
@@ -111,7 +111,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory C:/TEMP/))
   )
 
   (net 0 "")
