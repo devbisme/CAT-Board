@@ -1,0 +1,56 @@
+Assemble CAT Board parts in this order:
+
+Frontside:
+    U4    - FPGA
+
+Backside:                       Frontside:
+    R6    - 100 ohm                 C48   - 0.1 uF
+    C44   - 0.1 uF                  U7    - Oscillator
+    C46   - 0.01 uF                 LED1  - LED
+    C38   - 1.0 uF                  LED2  - LED
+    C40   - 0.1 uF                  LED3  - LED
+    C33   - 10 uF                   LED4  - LED
+    C42   - 0.1 uF                  RN5   - 100 ohm x 4
+    C17   - 0.1 uF                  RN9   - 4.7 Kohm x 2
+    C34   - 0.1 uF                  RN10  - 4.7 Kohm x 2
+    C25   - 0.1 uF                  RN11  - 4.7 Kohm x 2
+    C35   - 0.1 uF                  RN1   - 4.7 Kohm x 2
+    C21   - 1.0 uF                  RN4   - 4.7 Kohm x 2
+    C32   - 10 uF                   RN2   - 100 ohm x 2
+    C23   - 1.0 uF                  Q1    - MOSFET
+    C19   - 0.1 uF                  C2    - 10 uF
+    C31   - 1.0 uF                  C3    - 10 uF
+    C27   - 0.1 uF                  C4    - 10 uF
+    C43   - 0.01 uF                 U1    - AZ1117EH-3.3
+    C41   - 0.1 uF                  U3    - AZ1117EH-1.2
+    C39   - 1.0 uF                  U5    - SDRAM
+    C28   - 1.0 uF                  RESET - Pushbutton
+    C24   - 0.1 uF                  SW1   - Pushbutton
+    C20   - 1.0 uF                  SW2   - Pushbutton
+    C16   - 0.1 uF                  U2    - I2C Serial Flash
+    D1    - Diode                   U6    - SPI Serial Flash
+    R1    - 100 ohm                 C1    - 100 uF
+    C29   - 1.0 uF
+    C45   - 0.1 uF
+    C26   - 0.1 uF
+    C18   - 0.1 uF
+    C22   - 1.0 uF
+    C47   - 0.1 uF
+    C30   - 1.0 uF
+    C5    - 0.1 uF
+    C8    - 0.1 uF
+    C10   - 0.1 uF
+    C12   - 0.1 uF
+    C14   - 0.1 uF
+    C9    - 1.0 uF
+    C11   - 1.0 uF
+    C13   - 1.0 uF
+    C6    - 10 uF
+    R7    - 100 ohm
+    RN6   - 100 ohm x 4
+    RN3   - 4.7K ohm x 2
+    R10   - 787 ohm
+    R9    - 1.87K ohm
+    R11   - 475 ohm
+    R8    - 768 ohm
+    U8    - AZ1117EH-ADJ
