@@ -1,43 +1,4 @@
-EESchema Schematic File Version 2
-LIBS:CAT-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:xess
-LIBS:Cypress_PSoC
-LIBS:Cypress_cy8c5xlp
-LIBS:Lattice_iCE_FPGA
-LIBS:xilinx7
-LIBS:xilinx6v
-LIBS:xilinx6s
-LIBS:xula
-LIBS:espressif-xess
+EESchema Schematic File Version 4
 LIBS:CAT-cache
 EELAYER 26 0
 EELAYER END
@@ -54,7 +15,7 @@ Comment3 "CC BY 4.0"
 Comment4 ""
 $EndDescr
 $Comp
-L iCE40-HX8K-CT256 U?
+L Lattice-iCE:iCE40-HX8K-CT256 U?
 U 1 1 55F04E97
 P 6700 2100
 AR Path="/55DF5F27/55E883EA/55F04E97" Ref="U?"  Part="1" 
@@ -70,7 +31,7 @@ F 5 "ICE40HX8K-CT256" H 6700 2100 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C16
+L device:C C16
 U 1 1 55F0DEEF
 P 4200 3850
 F 0 "C16" H 4225 3950 50  0000 L CNN
@@ -83,7 +44,7 @@ F 5 "GRM188R71C104KA01D" H 4200 3850 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR022
+L power1:GND #PWR022
 U 1 1 55F0DEF6
 P 4200 4000
 F 0 "#PWR022" H 4200 3750 60  0001 C CNN
@@ -94,7 +55,7 @@ F 3 "" H 4200 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C20
+L device:C C20
 U 1 1 55F0DF7E
 P 4500 3850
 F 0 "C20" H 4525 3950 50  0000 L CNN
@@ -107,7 +68,7 @@ F 5 "GRM188R71C105KE15D" H 4500 3850 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR023
+L power1:GND #PWR023
 U 1 1 55F0DF85
 P 4500 4000
 F 0 "#PWR023" H 4500 3750 60  0001 C CNN
@@ -118,7 +79,7 @@ F 3 "" H 4500 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C24
+L device:C C24
 U 1 1 55F0E0B1
 P 4800 3850
 F 0 "C24" H 4825 3950 50  0000 L CNN
@@ -131,7 +92,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR024
+L power1:GND #PWR024
 U 1 1 55F0E0B7
 P 4800 4000
 F 0 "#PWR024" H 4800 3750 60  0001 C CNN
@@ -142,7 +103,7 @@ F 3 "" H 4800 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C28
+L device:C C28
 U 1 1 55F0E0BF
 P 5100 3850
 F 0 "C28" H 5125 3950 50  0000 L CNN
@@ -155,7 +116,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR025
+L power1:GND #PWR025
 U 1 1 55F0E0C5
 P 5100 4000
 F 0 "#PWR025" H 5100 3750 60  0001 C CNN
@@ -166,7 +127,7 @@ F 3 "" H 5100 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C17
+L device:C C17
 U 1 1 55F0E64A
 P 4200 4450
 F 0 "C17" H 4225 4550 50  0000 L CNN
@@ -179,7 +140,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR026
+L power1:GND #PWR026
 U 1 1 55F0E650
 P 4200 4600
 F 0 "#PWR026" H 4200 4350 60  0001 C CNN
@@ -190,7 +151,7 @@ F 3 "" H 4200 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C21
+L device:C C21
 U 1 1 55F0E657
 P 4500 4450
 F 0 "C21" H 4525 4550 50  0000 L CNN
@@ -203,7 +164,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR027
+L power1:GND #PWR027
 U 1 1 55F0E65D
 P 4500 4600
 F 0 "#PWR027" H 4500 4350 60  0001 C CNN
@@ -214,7 +175,7 @@ F 3 "" H 4500 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C25
+L device:C C25
 U 1 1 55F0E664
 P 4800 4450
 F 0 "C25" H 4825 4550 50  0000 L CNN
@@ -227,7 +188,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR028
+L power1:GND #PWR028
 U 1 1 55F0E66A
 P 4800 4600
 F 0 "#PWR028" H 4800 4350 60  0001 C CNN
@@ -238,7 +199,7 @@ F 3 "" H 4800 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C29
+L device:C C29
 U 1 1 55F0E672
 P 5100 4450
 F 0 "C29" H 5125 4550 50  0000 L CNN
@@ -251,7 +212,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR029
+L power1:GND #PWR029
 U 1 1 55F0E678
 P 5100 4600
 F 0 "#PWR029" H 5100 4350 60  0001 C CNN
@@ -262,7 +223,7 @@ F 3 "" H 5100 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C18
+L device:C C18
 U 1 1 55F0E885
 P 4200 5050
 F 0 "C18" H 4225 5150 50  0000 L CNN
@@ -275,7 +236,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR030
+L power1:GND #PWR030
 U 1 1 55F0E88B
 P 4200 5200
 F 0 "#PWR030" H 4200 4950 60  0001 C CNN
@@ -286,7 +247,7 @@ F 3 "" H 4200 5200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C22
+L device:C C22
 U 1 1 55F0E892
 P 4500 5050
 F 0 "C22" H 4525 5150 50  0000 L CNN
@@ -299,7 +260,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR031
+L power1:GND #PWR031
 U 1 1 55F0E898
 P 4500 5200
 F 0 "#PWR031" H 4500 4950 60  0001 C CNN
@@ -310,7 +271,7 @@ F 3 "" H 4500 5200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C26
+L device:C C26
 U 1 1 55F0E89F
 P 4800 5050
 F 0 "C26" H 4825 5150 50  0000 L CNN
@@ -323,7 +284,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR032
+L power1:GND #PWR032
 U 1 1 55F0E8A5
 P 4800 5200
 F 0 "#PWR032" H 4800 4950 60  0001 C CNN
@@ -334,7 +295,7 @@ F 3 "" H 4800 5200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C30
+L device:C C30
 U 1 1 55F0E8AD
 P 5100 5050
 F 0 "C30" H 5125 5150 50  0000 L CNN
@@ -347,7 +308,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR033
+L power1:GND #PWR033
 U 1 1 55F0E8B3
 P 5100 5200
 F 0 "#PWR033" H 5100 4950 60  0001 C CNN
@@ -358,7 +319,7 @@ F 3 "" H 5100 5200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C19
+L device:C C19
 U 1 1 55F0E8C6
 P 4200 5650
 F 0 "C19" H 4225 5750 50  0000 L CNN
@@ -371,7 +332,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR034
+L power1:GND #PWR034
 U 1 1 55F0E8CC
 P 4200 5800
 F 0 "#PWR034" H 4200 5550 60  0001 C CNN
@@ -382,7 +343,7 @@ F 3 "" H 4200 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C23
+L device:C C23
 U 1 1 55F0E8D3
 P 4500 5650
 F 0 "C23" H 4525 5750 50  0000 L CNN
@@ -395,7 +356,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR035
+L power1:GND #PWR035
 U 1 1 55F0E8D9
 P 4500 5800
 F 0 "#PWR035" H 4500 5550 60  0001 C CNN
@@ -406,7 +367,7 @@ F 3 "" H 4500 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C27
+L device:C C27
 U 1 1 55F0E8E0
 P 4800 5650
 F 0 "C27" H 4825 5750 50  0000 L CNN
@@ -419,7 +380,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR036
+L power1:GND #PWR036
 U 1 1 55F0E8E6
 P 4800 5800
 F 0 "#PWR036" H 4800 5550 60  0001 C CNN
@@ -430,7 +391,7 @@ F 3 "" H 4800 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C31
+L device:C C31
 U 1 1 55F0E8EE
 P 5100 5650
 F 0 "C31" H 5125 5750 50  0000 L CNN
@@ -443,7 +404,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR037
+L power1:GND #PWR037
 U 1 1 55F0E8F4
 P 5100 5800
 F 0 "#PWR037" H 5100 5550 60  0001 C CNN
@@ -454,7 +415,7 @@ F 3 "" H 5100 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C34
+L device:C C34
 U 1 1 55F0EA83
 P 5550 1850
 F 0 "C34" H 5575 1950 50  0000 L CNN
@@ -467,7 +428,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C32
+L device:C C32
 U 1 1 55F0EBB5
 P 5300 1850
 F 0 "C32" H 5325 1950 50  0000 L CNN
@@ -480,7 +441,7 @@ F 5 "GRM21BR61A106KE19L" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C35
+L device:C C35
 U 1 1 55F0EC70
 P 5550 2350
 F 0 "C35" H 5575 2450 50  0000 L CNN
@@ -493,7 +454,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C33
+L device:C C33
 U 1 1 55F0EC77
 P 5300 2350
 F 0 "C33" H 5325 2450 50  0000 L CNN
@@ -506,7 +467,7 @@ F 5 "GRM21BR61A106KE19L" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D1
+L device:D D1
 U 1 1 55F0F6F2
 P 6550 2800
 F 0 "D1" H 6550 2900 50  0000 C CNN
@@ -519,7 +480,7 @@ F 5 "1N4448WX-TP" H 6550 2800 60  0001 C CNN "manf#"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C38
+L device:C C38
 U 1 1 55F0FC1B
 P 6800 3850
 F 0 "C38" H 6825 3950 50  0000 L CNN
@@ -532,7 +493,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR038
+L power1:GND #PWR038
 U 1 1 55F0FC21
 P 6800 4000
 F 0 "#PWR038" H 6800 3750 60  0001 C CNN
@@ -543,7 +504,7 @@ F 3 "" H 6800 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C40
+L device:C C40
 U 1 1 55F0FC28
 P 7100 3850
 F 0 "C40" H 7125 3950 50  0000 L CNN
@@ -556,7 +517,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR039
+L power1:GND #PWR039
 U 1 1 55F0FC2E
 P 7100 4000
 F 0 "#PWR039" H 7100 3750 60  0001 C CNN
@@ -567,7 +528,7 @@ F 3 "" H 7100 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C42
+L device:C C42
 U 1 1 55F0FC36
 P 7400 3850
 F 0 "C42" H 7425 3950 50  0000 L CNN
@@ -580,7 +541,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR040
+L power1:GND #PWR040
 U 1 1 55F0FC3C
 P 7400 4000
 F 0 "#PWR040" H 7400 3750 60  0001 C CNN
@@ -591,7 +552,7 @@ F 3 "" H 7400 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C44
+L device:C C44
 U 1 1 55F0FE0D
 P 7700 3850
 F 0 "C44" H 7725 3950 50  0000 L CNN
@@ -604,7 +565,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR041
+L power1:GND #PWR041
 U 1 1 55F0FE13
 P 7700 4000
 F 0 "#PWR041" H 7700 3750 60  0001 C CNN
@@ -615,7 +576,7 @@ F 3 "" H 7700 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C45
+L device:C C45
 U 1 1 55F0FE1A
 P 8000 3850
 F 0 "C45" H 8025 3950 50  0000 L CNN
@@ -628,7 +589,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR042
+L power1:GND #PWR042
 U 1 1 55F0FE20
 P 8000 4000
 F 0 "#PWR042" H 8000 3750 60  0001 C CNN
@@ -639,7 +600,7 @@ F 3 "" H 8000 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C46
+L device:C C46
 U 1 1 55F0FE27
 P 8300 3850
 F 0 "C46" H 8325 3950 50  0000 L CNN
@@ -652,7 +613,7 @@ F 5 "GRM188R71H103KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR043
+L power1:GND #PWR043
 U 1 1 55F0FE2D
 P 8300 4000
 F 0 "#PWR043" H 8300 3750 60  0001 C CNN
@@ -663,7 +624,7 @@ F 3 "" H 8300 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C39
+L device:C C39
 U 1 1 55F1042A
 P 6800 4450
 F 0 "C39" H 6825 4550 50  0000 L CNN
@@ -676,7 +637,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR044
+L power1:GND #PWR044
 U 1 1 55F10430
 P 6800 4600
 F 0 "#PWR044" H 6800 4350 60  0001 C CNN
@@ -687,7 +648,7 @@ F 3 "" H 6800 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C41
+L device:C C41
 U 1 1 55F10437
 P 7100 4450
 F 0 "C41" H 7125 4550 50  0000 L CNN
@@ -700,7 +661,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR045
+L power1:GND #PWR045
 U 1 1 55F1043D
 P 7100 4600
 F 0 "#PWR045" H 7100 4350 60  0001 C CNN
@@ -711,7 +672,7 @@ F 3 "" H 7100 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C43
+L device:C C43
 U 1 1 55F10445
 P 7400 4450
 F 0 "C43" H 7425 4550 50  0000 L CNN
@@ -724,7 +685,7 @@ F 5 "GRM188R71H103KA01D" H 7400 4450 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR046
+L power1:GND #PWR046
 U 1 1 55F1044B
 P 7400 4600
 F 0 "#PWR046" H 7400 4350 60  0001 C CNN
@@ -735,7 +696,7 @@ F 3 "" H 7400 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L device:R R1
 U 1 1 55F72FA6
 P 5150 2000
 F 0 "R1" V 5230 2000 50  0000 C CNN
@@ -748,7 +709,7 @@ F 5 "RC0603JR-07100RL" H 0   0   50  0001 C CNN "manf#"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R6
+L device:R R6
 U 1 1 55F73113
 P 5150 2500
 F 0 "R6" V 5230 2500 50  0000 C CNN
@@ -761,7 +722,7 @@ F 5 "RC0603JR-07100RL" H 0   0   50  0001 C CNN "manf#"
 	0    1    1    0   
 $EndComp
 $Comp
-L PWR_FLAG #FLG047
+L power1:PWR_FLAG #FLG047
 U 1 1 55FBA6F9
 P 5850 1600
 F 0 "#FLG047" H 5850 1695 50  0001 C CNN
@@ -772,7 +733,7 @@ F 3 "" H 5850 1600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG048
+L power1:PWR_FLAG #FLG048
 U 1 1 55FBA74F
 P 5850 2000
 F 0 "#FLG048" H 5850 2095 50  0001 C CNN
@@ -783,7 +744,7 @@ F 3 "" H 5850 2000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG049
+L power1:PWR_FLAG #FLG049
 U 1 1 55FBA7A5
 P 6300 2100
 F 0 "#FLG049" H 6300 2195 50  0001 C CNN
@@ -794,7 +755,7 @@ F 3 "" H 6300 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG050
+L power1:PWR_FLAG #FLG050
 U 1 1 55FBA7FB
 P 6050 2500
 F 0 "#FLG050" H 6050 2595 50  0001 C CNN
@@ -805,7 +766,7 @@ F 3 "" H 6050 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NCV1117 U8
+L XESS:NCV1117 U8
 U 1 1 55FBE7F6
 P 2400 5400
 F 0 "U8" H 2200 5500 50  0000 L BNN
@@ -818,7 +779,7 @@ F 5 "AZ1117CH-ADJTRG1" H 2400 5400 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR051
+L power1:GND #PWR051
 U 1 1 55FBE7FE
 P 2400 6650
 F 0 "#PWR051" H 2400 6400 60  0001 C CNN
@@ -829,7 +790,7 @@ F 3 "" H 2400 6650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L device:C C6
 U 1 1 55FBE811
 P 3650 5650
 F 0 "C6" H 3675 5750 50  0000 L CNN
@@ -842,7 +803,7 @@ F 5 "GRM21BR61A106KE19L" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR052
+L power1:GND #PWR052
 U 1 1 55FBE818
 P 3650 5800
 F 0 "#PWR052" H 3650 5550 60  0001 C CNN
@@ -853,7 +814,7 @@ F 3 "" H 3650 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L device:R R8
 U 1 1 55FBE821
 P 2400 6400
 F 0 "R8" V 2480 6400 50  0000 C CNN
@@ -866,7 +827,7 @@ F 5 "RC0603FR-07768RL" V 2400 6400 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L device:R R9
 U 1 1 55FBE828
 P 2800 5800
 F 0 "R9" V 2880 5800 50  0000 C CNN
@@ -4276,15 +4237,15 @@ Text GLabel 2000 5500 0    50   Input ~ 0
 Text Notes 2650 6500 0    50   ~ 0
 R8 = 1260 for VCCIO_3 = 3.3V\nR8 =  768 for VCCIO_3 = 2.5V\nR8 =  338 for VCCIO_3 = 1.8V
 Wire Wire Line
-	4000 4300 5100 4300
+	4000 4300 4200 4300
 Wire Wire Line
-	4000 4900 5100 4900
+	4000 4900 4200 4900
 Wire Wire Line
-	5300 2000 5950 2000
+	5300 2000 5550 2000
 Wire Wire Line
-	5300 2500 6700 2500
+	5300 2500 5550 2500
 Wire Wire Line
-	5300 2100 6700 2100
+	5300 2100 5550 2100
 Wire Wire Line
 	5300 2100 5300 2200
 Wire Wire Line
@@ -4294,7 +4255,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 2200 6050 1600
 Wire Wire Line
-	6050 1600 5300 1600
+	6050 1600 5850 1600
 Wire Wire Line
 	5550 1600 5550 1700
 Wire Wire Line
@@ -4304,21 +4265,21 @@ Wire Wire Line
 Wire Wire Line
 	5950 2600 5950 2000
 Wire Wire Line
-	6300 3700 8300 3700
+	6300 3700 6800 3700
 Wire Wire Line
-	6300 4300 7400 4300
+	6300 4300 6800 4300
 Wire Wire Line
 	6400 2700 6700 2700
 Wire Wire Line
 	6700 2300 6400 2300
 Wire Wire Line
-	4000 3700 5100 3700
+	4000 3700 4200 3700
 Wire Wire Line
-	2700 5500 5300 5500
+	2700 5500 2800 5500
 Wire Wire Line
 	2400 6650 2400 6550
 Wire Wire Line
-	2400 5800 2400 6250
+	2400 5800 2400 6100
 Wire Wire Line
 	2100 5500 2000 5500
 Wire Wire Line
@@ -4360,4 +4321,66 @@ Connection ~ 2400 6100
 Connection ~ 2800 5500
 NoConn ~ 6700 2400
 NoConn ~ 6700 2900
+Wire Wire Line
+	4200 3700 4500 3700
+Wire Wire Line
+	4500 3700 4800 3700
+Wire Wire Line
+	4800 3700 5100 3700
+Wire Wire Line
+	4200 4300 4500 4300
+Wire Wire Line
+	4500 4300 4800 4300
+Wire Wire Line
+	4800 4300 5100 4300
+Wire Wire Line
+	4200 4900 4500 4900
+Wire Wire Line
+	4500 4900 4800 4900
+Wire Wire Line
+	4800 4900 5100 4900
+Wire Wire Line
+	5550 2000 5850 2000
+Wire Wire Line
+	5550 2500 6050 2500
+Wire Wire Line
+	5550 2100 6300 2100
+Wire Wire Line
+	5550 1600 5300 1600
+Wire Wire Line
+	6800 3700 7100 3700
+Wire Wire Line
+	7100 3700 7400 3700
+Wire Wire Line
+	7400 3700 7700 3700
+Wire Wire Line
+	7700 3700 8000 3700
+Wire Wire Line
+	8000 3700 8300 3700
+Wire Wire Line
+	6800 4300 7100 4300
+Wire Wire Line
+	7100 4300 7400 4300
+Wire Wire Line
+	5100 5500 5300 5500
+Wire Wire Line
+	4800 5500 5100 5500
+Wire Wire Line
+	4500 5500 4800 5500
+Wire Wire Line
+	4200 5500 4500 5500
+Wire Wire Line
+	5850 1600 5550 1600
+Wire Wire Line
+	5850 2000 5950 2000
+Wire Wire Line
+	6300 2100 6700 2100
+Wire Wire Line
+	6050 2500 6700 2500
+Wire Wire Line
+	3650 5500 4200 5500
+Wire Wire Line
+	2400 6100 2400 6250
+Wire Wire Line
+	2800 5500 3650 5500
 $EndSCHEMATC

@@ -1,43 +1,4 @@
-EESchema Schematic File Version 2
-LIBS:CAT-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:xess
-LIBS:Cypress_PSoC
-LIBS:Cypress_cy8c5xlp
-LIBS:Lattice_iCE_FPGA
-LIBS:xilinx7
-LIBS:xilinx6v
-LIBS:xilinx6s
-LIBS:xula
-LIBS:espressif-xess
+EESchema Schematic File Version 4
 LIBS:CAT-cache
 EELAYER 26 0
 EELAYER END
@@ -54,7 +15,7 @@ Comment3 "CC BY 4.0"
 Comment4 ""
 $EndDescr
 $Comp
-L SDRAM U5
+L CAT-rescue:SDRAM U5
 U 1 1 55E88707
 P 5500 2500
 F 0 "U5" H 5700 2750 60  0000 L CNN
@@ -68,7 +29,7 @@ F 6 "AS4C16M16S-6TCN" H 5500 2500 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C12
+L device:C C12
 U 1 1 55E9F330
 P 6350 5750
 F 0 "C12" H 6375 5850 50  0000 L CNN
@@ -81,7 +42,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C13
+L device:C C13
 U 1 1 55E9F363
 P 6650 5750
 F 0 "C13" H 6675 5850 50  0000 L CNN
@@ -94,7 +55,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C14
+L device:C C14
 U 1 1 55E9F939
 P 6950 5750
 F 0 "C14" H 6975 5850 50  0000 L CNN
@@ -107,7 +68,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L device:C C8
 U 1 1 55E9FAF7
 P 5150 5750
 F 0 "C8" H 5175 5850 50  0000 L CNN
@@ -120,7 +81,7 @@ F 5 "GRM188R71C104KA01D" H 5150 5750 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L device:C C9
 U 1 1 55E9FAFD
 P 5450 5750
 F 0 "C9" H 5475 5850 50  0000 L CNN
@@ -133,7 +94,7 @@ F 5 "GRM188R71C105KE15D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C10
+L device:C C10
 U 1 1 55E9FB07
 P 5750 5750
 F 0 "C10" H 5775 5850 50  0000 L CNN
@@ -146,7 +107,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C11
+L device:C C11
 U 1 1 55E9FB0D
 P 6050 5750
 F 0 "C11" H 6075 5850 50  0000 L CNN

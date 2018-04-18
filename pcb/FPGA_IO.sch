@@ -1,43 +1,4 @@
-EESchema Schematic File Version 2
-LIBS:CAT-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:xess
-LIBS:Cypress_PSoC
-LIBS:Cypress_cy8c5xlp
-LIBS:Lattice_iCE_FPGA
-LIBS:xilinx7
-LIBS:xilinx6v
-LIBS:xilinx6s
-LIBS:xula
-LIBS:espressif-xess
+EESchema Schematic File Version 4
 LIBS:CAT-cache
 EELAYER 26 0
 EELAYER END
@@ -54,7 +15,7 @@ Comment3 "CC BY 4.0"
 Comment4 ""
 $EndDescr
 $Comp
-L iCE40-HX8K-CT256 U?
+L Lattice-iCE:iCE40-HX8K-CT256 U?
 U 2 1 55F04D7F
 P 1400 900
 AR Path="/55DF5F27/55E883EA/55F04D7F" Ref="U?"  Part="2" 
@@ -70,7 +31,7 @@ F 5 "ICE40HX8K-CT256" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L iCE40-HX8K-CT256 U?
+L Lattice-iCE:iCE40-HX8K-CT256 U?
 U 3 1 55F04D86
 P 3400 900
 AR Path="/55DF5F27/55E883EA/55F04D86" Ref="U?"  Part="3" 
@@ -86,7 +47,7 @@ F 5 "ICE40HX8K-CT256" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L iCE40-HX8K-CT256 U?
+L Lattice-iCE:iCE40-HX8K-CT256 U?
 U 4 1 55F04D8D
 P 9900 1400
 AR Path="/55DF5F27/55E883EA/55F04D8D" Ref="U?"  Part="4" 
@@ -102,7 +63,7 @@ F 5 "ICE40HX8K-CT256" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L iCE40-HX8K-CT256 U?
+L Lattice-iCE:iCE40-HX8K-CT256 U?
 U 5 1 55F04D94
 P 5400 900
 AR Path="/55DF5F27/55E883EA/55F04D94" Ref="U?"  Part="5" 
@@ -118,7 +79,7 @@ F 5 "ICE40HX8K-CT256" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L OSC U7
+L XESS:OSC U7
 U 1 1 55F1B092
 P 3450 7050
 F 0 "U7" H 3650 7300 60  0000 L CNN
@@ -131,7 +92,7 @@ F 5 "501ACA100M000CAG" H 3450 7050 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L RN2 RN4
+L XESS:RN2 RN4
 U 1 1 55F1B0FB
 P 9600 1300
 F 0 "RN4" H 9750 1200 50  0000 C CNN
@@ -144,7 +105,7 @@ F 5 "742C043472JP" H 0   0   50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L RN2 RN4
+L XESS:RN2 RN4
 U 2 1 55F1B188
 P 9800 1300
 F 0 "RN4" H 9950 1200 50  0000 C CNN
@@ -157,7 +118,7 @@ F 5 "742C043472JP" H 0   0   50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L SW_PUSH RESET1
+L CAT-rescue:SW_PUSH RESET1
 U 1 1 55F43F78
 P 8800 1500
 F 0 "RESET1" H 8800 1450 50  0000 C CNN
@@ -170,7 +131,7 @@ F 5 "RS-282G05A3-SM RT" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L JUMPER-RESCUE-CAT JP5
+L CAT-rescue:JUMPER-RESCUE-CAT JP5
 U 1 1 55F44072
 P 8800 1800
 AR Path="/55F44072" Ref="JP5"  Part="1" 
@@ -183,7 +144,7 @@ F 3 "" H 8800 1800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L JUMPER-RESCUE-CAT JP1
+L CAT-rescue:JUMPER-RESCUE-CAT JP1
 U 1 1 55F4436F
 P 8800 1150
 AR Path="/55F4436F" Ref="JP1"  Part="1" 
@@ -196,7 +157,7 @@ F 3 "" H 8800 1150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L JSHORTNORMAL J?
+L XESS:JSHORTNORMAL J?
 U 1 1 55F913D4
 P 8850 1300
 AR Path="/55F913D4" Ref="J?"  Part="1" 
@@ -209,7 +170,7 @@ F 3 "" H 8850 1300 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L JSHORTNORMAL J?
+L XESS:JSHORTNORMAL J?
 U 1 1 55F913E4
 P 8850 1950
 AR Path="/55F913E4" Ref="J?"  Part="1" 
@@ -222,7 +183,7 @@ F 3 "" H 8850 1950 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R7
+L device:R R7
 U 1 1 55FA4B25
 P 8300 1500
 F 0 "R7" V 8200 1450 50  0000 L CNN
@@ -3872,13 +3833,13 @@ GR3-IO1
 Text GLabel 1400 1500 0    50   Input ~ 0
 GR3-IO2
 Wire Wire Line
-	2900 3700 3400 3700
+	2900 3700 3000 3700
 Wire Wire Line
 	3400 3900 3000 3900
 Wire Wire Line
 	3000 3900 3000 3700
 Wire Wire Line
-	9100 1500 9900 1500
+	9100 1500 9200 1500
 Wire Wire Line
 	9600 1300 9600 1500
 Wire Wire Line
@@ -3906,11 +3867,11 @@ Wire Wire Line
 Wire Wire Line
 	9200 1300 9200 1150
 Wire Wire Line
-	9100 1150 9400 1150
+	9100 1150 9200 1150
 Wire Wire Line
 	9400 1150 9400 1400
 Wire Wire Line
-	9400 1400 9900 1400
+	9400 1400 9800 1400
 Wire Wire Line
 	9800 1300 9800 1400
 Wire Wire Line
@@ -4002,4 +3963,14 @@ NoConn ~ 9900 5600
 NoConn ~ 9900 5800
 NoConn ~ 9900 6000
 NoConn ~ 9900 6100
+Wire Wire Line
+	3000 3700 3400 3700
+Wire Wire Line
+	9600 1500 9900 1500
+Wire Wire Line
+	9200 1500 9600 1500
+Wire Wire Line
+	9200 1150 9400 1150
+Wire Wire Line
+	9800 1400 9900 1400
 $EndSCHEMATC

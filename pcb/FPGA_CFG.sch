@@ -1,43 +1,4 @@
-EESchema Schematic File Version 2
-LIBS:CAT-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:xess
-LIBS:Cypress_PSoC
-LIBS:Cypress_cy8c5xlp
-LIBS:Lattice_iCE_FPGA
-LIBS:xilinx7
-LIBS:xilinx6v
-LIBS:xilinx6s
-LIBS:xula
-LIBS:espressif-xess
+EESchema Schematic File Version 4
 LIBS:CAT-cache
 EELAYER 26 0
 EELAYER END
@@ -54,7 +15,7 @@ Comment3 "CC BY 4.0"
 Comment4 ""
 $EndDescr
 $Comp
-L iCE40-HX8K-CT256 U?
+L Lattice-iCE:iCE40-HX8K-CT256 U?
 U 6 1 55F04F56
 P 5600 3500
 AR Path="/55DF5F27/55E883EA/55F04F56" Ref="U?"  Part="6" 
@@ -70,7 +31,7 @@ F 5 "ICE40HX8K-CT256" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SERIAL_FLASH U6
+L CAT-rescue:SERIAL_FLASH U6
 U 1 1 55F04F6B
 P 5600 4700
 F 0 "U6" H 5800 4950 60  0000 L CNN
@@ -83,7 +44,7 @@ F 5 "AT25SF041-SSHD-T" H 5600 4700 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C47
+L device:C C47
 U 1 1 55F05A0B
 P 7300 3700
 F 0 "C47" H 7325 3800 50  0000 L CNN
@@ -96,7 +57,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C48
+L device:C C48
 U 1 1 55F05BFC
 P 7300 4850
 F 0 "C48" H 7325 4950 50  0000 L CNN
@@ -109,7 +70,7 @@ F 5 "GRM188R71C104KA01D" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR053
+L power1:GND #PWR053
 U 1 1 55F05C02
 P 7300 5000
 F 0 "#PWR053" H 7300 4750 60  0001 C CNN
@@ -120,7 +81,7 @@ F 3 "" H 7300 5000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RN2 RN3
+L XESS:RN2 RN3
 U 1 1 55F0D803
 P 4850 3400
 F 0 "RN3" H 5000 3300 50  0000 C CNN
@@ -133,7 +94,7 @@ F 5 "742C043472JP" H 0   0   50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L RN2 RN3
+L XESS:RN2 RN3
 U 2 1 55F0D8A0
 P 5150 3400
 F 0 "RN3" H 5300 3300 50  0000 C CNN
@@ -146,7 +107,7 @@ F 5 "742C043472JP" H 0   0   50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L RN4 RN12
+L XESS:RN4 RN12
 U 1 1 56E77223
 P 3700 3600
 F 0 "RN12" H 4100 3650 50  0000 C CNN
@@ -159,7 +120,7 @@ F 5 "741C083101JP" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L RN4 RN12
+L XESS:RN4 RN12
 U 2 1 56E7725F
 P 3700 3500
 F 0 "RN12" H 4100 3550 50  0000 C CNN
@@ -172,7 +133,7 @@ F 5 "741C083101JP" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L RN4 RN12
+L XESS:RN4 RN12
 U 3 1 56E772A7
 P 3700 3800
 F 0 "RN12" H 4100 3850 50  0000 C CNN
@@ -185,7 +146,7 @@ F 5 "741C083101JP" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L RN4 RN12
+L XESS:RN4 RN12
 U 4 1 56E772F7
 P 3700 3700
 F 0 "RN12" H 4100 3750 50  0000 C CNN
@@ -198,7 +159,7 @@ F 5 "741C083101JP" H 0   0   50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR054
+L power1:GND #PWR054
 U 1 1 56EB84D3
 P 7300 3850
 F 0 "#PWR054" H 7300 3600 60  0001 C CNN
@@ -3606,19 +3567,19 @@ BCM10_MOSI
 Text GLabel 3700 3800 0    50   Input ~ 0
 BCM25
 Wire Wire Line
-	4000 3600 5600 3600
+	4000 3600 5050 3600
 Wire Wire Line
 	4950 5200 6700 5200
 Wire Wire Line
 	6700 5200 6700 5000
 Wire Wire Line
-	4000 3500 5600 3500
+	4000 3500 4950 3500
 Wire Wire Line
 	5050 4800 5600 4800
 Wire Wire Line
-	4000 3700 5600 3700
+	4000 3700 4850 3700
 Wire Wire Line
-	4850 3400 4850 5300
+	4850 3400 4850 3700
 Wire Wire Line
 	4850 5300 6800 5300
 Wire Wire Line
@@ -3626,9 +3587,9 @@ Wire Wire Line
 Wire Wire Line
 	6800 4900 6700 4900
 Wire Wire Line
-	4000 3800 5600 3800
+	4000 3800 5150 3800
 Wire Wire Line
-	5150 3400 5150 4700
+	5150 3400 5150 3800
 Wire Wire Line
 	5150 4700 5600 4700
 Wire Wire Line
@@ -3639,4 +3600,16 @@ Connection ~ 4850 3700
 Connection ~ 5150 3800
 Connection ~ 4950 3500
 Connection ~ 5050 3600
+Wire Wire Line
+	4850 3700 5600 3700
+Wire Wire Line
+	4850 3700 4850 5300
+Wire Wire Line
+	5150 3800 5600 3800
+Wire Wire Line
+	5150 3800 5150 4700
+Wire Wire Line
+	4950 3500 5600 3500
+Wire Wire Line
+	5050 3600 5600 3600
 $EndSCHEMATC
