@@ -4,7 +4,7 @@ class RaspiGpioIntfc(Interface):
     """
     Instantiate an interface for a Raspi GPIO header.
     """
-    def __init__(self, circuit=None, gpio=Part('XESS', 'RPi_GPIO', footprint='RPi_Hat:Pin_Header_Straight_2x20', dest=TEMPLATE)):
+    def __init__(self, circuit=None, gpio=RASPI_GPIO_SOCKET):
         super(RaspiGpioIntfc, self).__init__(prefix='RASPI_GPIO', circuit=circuit)
 
         self.gpio = gpio # Store the Raspi GPIO socket template.
