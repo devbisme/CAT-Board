@@ -1,10 +1,8 @@
 from globals import *
 
-def hdmi_intfc(clk_p, clk_n, data_p, data_n, scl, sda):
+def hdmi_intfc(clk_p, clk_n, data_p, data_n, scl, sda, gnd):
 
-    global gnd
-
-    hdmi = Part('xess', 'HDMI-FEMALE', footprint='HD10-001')  # Female HDMI socket.
+    hdmi = Part('xess', 'HDMI-FEMALE', footprint='xesscorp/xess.pretty:HD10-003')  # Female HDMI socket.
 
     hdmi['SHLD$', 'GND'] += gnd
 
@@ -25,12 +23,12 @@ def hdmi_intfc(clk_p, clk_n, data_p, data_n, scl, sda):
     # a line to ground, the HDMI device will see 5V * 100/(2K + 100) = .24V.
     # When the FPGA tristates a line, the HDMI device will see
     # 3.3V + 0.7V + (5V - 4V) * 100/(2K + 100) = 4.05V.
-    i2c_pullup = RN2(value='2K0')  # Pullups to +5V for HDMI I2C bus.
-    i2c_pullup.unit['A']['PL,PR'] += hdmi['SCL'], hdmi['+5V']
-    i2c_pullup.unit['B']['PL,PR'] += hdmi['SDA'], hdmi['+5V']
-    i2c_serial = RN2(value='100')  # Serial resistors for level-shift to +3.3.
-    i2c_serial.unit['A']['PL,PR'] += scl, hdmi['SCL']
-    i2c_serial.unit['B']['PL,PR'] += sda, hdmi['SDA']
+    i2c_pullup = RN2_m(value='2K0')  # Pullups to +5V for HDMI I2C bus.
+    i2c_pullup.unit['A']['L,R'] += hdmi['SCL'], hdmi['+5V']
+    i2c_pullup.unit['B']['L,R'] += hdmi['SDA'], hdmi['+5V']
+    i2c_serial = RN2_m(value='100')  # Serial resistors for level-shift to +3.3.
+    i2c_serial.unit['A']['L,R'] += scl, hdmi['SCL']
+    i2c_serial.unit['B']['L,R'] += sda, hdmi['SDA']
 
     # Connect resistor between +5V and DETECT of HDMI.
     r_detect = R_m(value='10K')
