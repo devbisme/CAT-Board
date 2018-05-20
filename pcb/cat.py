@@ -27,7 +27,7 @@ Net.fetch('+3.3V').connect(fpga['VCCIO'])
 Net.fetch('+1.2V').connect(fpga['VCC[6]'])
 
 # 2.5V for VPP using a diode to drop 3.3 to 2.5.
-Part('device', 'D', footprint='Diodes_SMD:SOD-323')['A,K'] += Net.fetch('+3.3V'), Net.fetch('+2.5V')
+Part('device', 'D', footprint='KiCad_V5/Diode_SMD.pretty:D_SOD-323')['A,K'] += Net.fetch('+3.3V'), Net.fetch('+2.5V')
 Net.fetch('+2.5V').connect(fpga['VPP_2V5'])
 Net.fetch('+2.5V').drive = POWER
 
@@ -100,7 +100,7 @@ osc(clk=Net.fetch('USER_CLK'), vcc=Net.fetch('+3.3V'), gnd=Net.fetch('GND'))
 Net.fetch('USER_CLK').connect(fpga['C8'])
 
 # Add the LEDs.
-leds(Bus.fetch('LED_BUS', 4), Net.fetch('GND'), '330')
+leds(Bus.fetch('LED_BUS', 4), Net.fetch('GND'), resistance='330')
 fpga['A9, B8, A7, B7'] += Bus.fetch('LED_BUS',4)[0:3]
 
 # Add DIP switch.
@@ -169,6 +169,10 @@ sd.ba[0:1]    += fpga['H14, G13']
 sd.addr[0:12] += fpga['F13, E14, E13, D14, B16, C16, D15, D16, E16, F15, F14, F16, G14']
 sd.data[0:15] += fpga['R14, P14, M13, M14, L13, L14, K13, K14, J16, L16, M16, M15, N16, P16, P15, R15']
 
+# HDMI interface.
+hdmi = hdmi_intfc(clk_p=fpga['L4'], clk_n=fpga['L1'],
+                    data_p=fpga['K4,P1,R1'], data_n=fpga['M1,M4,N4'],
+                    scl=fpga['P2'], sda=fpga['N3'], gnd=Net.fetch('GND'))
 
 ERC()
 generate_netlist()
