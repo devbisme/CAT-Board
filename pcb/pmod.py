@@ -1,13 +1,24 @@
 from globals import *
 
-def pmod_io(bus, vcc=None, gnd=None):
+@subcircuit
+def pmod_io(bus, vcc1=None, vcc2=None, gnd=None):
     """
     """
 
-    if not vcc:
+    if not vcc1 and not vcc2:
         vcc1 = Net.fetch('+3.3V')
     if not gnd:
         gnd = Net.fetch('GND')
+
+    # If two voltage supplies are available, create a 3-pin jumper to select
+    # which one powers the PMOD connector.
+    if vcc1 and vcc2:
+        voltage_selector = JMP3()
+        voltage_selector[1,3] += vcc1, vcc2
+        vcc = voltage_selector[2]  # PMOD power supply comes off the middle pin.
+        vcc.drive = POWER  # Make the pin capable of driving power to other parts.
+    else:
+        vcc = vcc1 or vcc2
 
     pmod = PMOD_SOCKET()
     pmod[1,7,2,8,3,9,4,10] += bus[0:7]  # Connect I/O bus to socket.

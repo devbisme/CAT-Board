@@ -1,4 +1,4 @@
-update=05/20/2018 8:44:11 AM
+update=05/22/2018 4:30:37 PM
 version=1
 last_client=pcbnew
 [general]
@@ -44,7 +44,7 @@ LibName29=valves
 [pcbnew]
 version=1
 PageLayoutDescrFile=C:/xesscorp/KiCad/page_layouts/title_block_only.kicad_wks
-LastNetListRead=
+LastNetListRead=CAT.net
 PadDrill=2.75
 PadDrillOvalY=2.75
 PadSizeH=2.75

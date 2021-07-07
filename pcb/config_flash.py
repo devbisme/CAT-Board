@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def fpga_config(fpga, vcc=None, gnd=None):
     """
     """

@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def hdmi_intfc(clk_p, clk_n, data_p, data_n, scl, sda, gnd):
 
     hdmi = Part('xess', 'HDMI-FEMALE', footprint='xesscorp/xess.pretty:HD10-003')  # Female HDMI socket.

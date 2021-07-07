@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def switches(switch_bus, rail1=None, rail2=None, pull1='', pull2='',
         switch_types = [None, DIP_SW1, DIP_SW2, DIP_SW3, DIP_SW4, DIP_SW5, DIP_SW6, DIP_SW7, DIP_SW8],
         r_types = [None, R_m, RN2_m, RN4_m, RN4_m, RN4_m, RN8_m, RN8_m, RN8_m],

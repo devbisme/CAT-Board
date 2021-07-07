@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def leds(anodes, cathodes, resistance='330',
         led_type = LED_m,
         r_types = [None, R_m, RN2_m, RN4_m, RN4_m, RN4_m, RN8_m, RN8_m, RN8_m],

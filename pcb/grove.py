@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def grove_io(d1=None, rx=None, scl=None, d2=None, tx=None, sda=None, vcc=None, gnd=None):
     """
     Instantiate a GROVE male connector.

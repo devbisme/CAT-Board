@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def i2c_flash(scl, sda, address=None, vcc=None, gnd=None):
     """
     """

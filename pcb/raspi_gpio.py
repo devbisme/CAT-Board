@@ -19,6 +19,7 @@ class RaspiGpioIntfc(Interface):
         for non_pwr_pin in self.gpio['BCM[0-9]+.*']:
             setattr(self, non_pwr_pin.name.lower(), Net(prefix + non_pwr_pin.name.upper()))
 
+@subcircuit
 def raspi_gpio(intfc):
     gpio_ = intfc.gpio()  # Instantiate the Raspi GPIO socket.
 

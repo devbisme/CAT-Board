@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def buttons(button_bus, rail1=None, rail2=None, pull1='', pull2='',
             button_type = BUTTON,
             r_types = [None, R_m, RN2_m, RN4_m, RN4_m, RN4_m, RN8_m, RN8_m, RN8_m],

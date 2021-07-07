@@ -66,11 +66,9 @@ reset_done_pullups.B['L,R'] += Net.fetch('+3.3V'), fpga['CDONE']
 fpga_config(fpga)
 
 # Construct the socket for connecting to the Raspberry Pi. 
-rpi = RaspiGpioIntfc()
-#rpi.v3v3        += NC
-rpi.v5v         += Net.fetch('+5V-Raspi')
-rpi.gnd         += Net.fetch('GND')
-raspi_gpio(intfc=rpi)
+rpi = Interface(gpio=RASPI_GPIO_SOCKET(), v5v=Net.fetch("+5V-Raspi"), v3v3=NC, gnd=Net.fetch("GND"))
+for pin in rpi.gpio['BCM[0-9]+.*']:
+    setattr(rpi, pin.name.lower(), Net(pin.name.upper()))
 rpi.bcm2_sda    += fpga['R16']
 rpi.bcm3_scl    += fpga['T16']
 rpi.bcm4_gpclk0 += fpga['R9' ]
@@ -113,22 +111,15 @@ fpga['A16, B9'] += Bus.fetch('BUTTON_BUS',2)[0:1]
 
 # Add PMOD socket.
 fpga['A1, A2, B3, B4, B5, A5, B6, A6'] += Bus.fetch('PM1_BUS',8)[0:7]
-# Add jumper to select which voltage supplies the socket.
-voltage_selector1 = JMP3()
-voltage_selector1[1,3] += Net.fetch('+3.3V'), Net.fetch('+5V')
-voltage_selector1[2].drive = POWER
-pmod_io(Bus.fetch('PM1_BUS',8), vcc=voltage_selector1[2])
+pmod_io(Bus.fetch('PM1_BUS',8), vcc1=Net.fetch('+3.3V'), vcc2=Net.fetch('+5V'))
 
 # Add another PMOD socket.
 fpga['A11, B10, B12, B11, B14, B13, B15, A15'] += Bus.fetch('PM2_BUS',8)[0:7]
-voltage_selector2 = JMP3()
-voltage_selector2[1,3] += Net.fetch('+3.3V'), Net.fetch('+5V')
-voltage_selector2[2].drive = POWER
-pmod_io(Bus.fetch('PM2_BUS',8), vcc=voltage_selector2[2])
+pmod_io(Bus.fetch('PM2_BUS',8), vcc1=Net.fetch('+3.3V'), vcc2=Net.fetch('+5V'))
 
 # Add pure digital GROVE headers sharing PMOD I/O.
-grove_io(d1=Bus.fetch('PM1_BUS')[1], d2=Bus.fetch('PM1_BUS')[3], vcc=voltage_selector1[2])
-grove_io(d1=Bus.fetch('PM2_BUS')[1], d2=Bus.fetch('PM2_BUS')[3], vcc=voltage_selector2[2])
+# grove_io(d1=Bus.fetch('PM1_BUS')[1], d2=Bus.fetch('PM1_BUS')[3], vcc=voltage_selector1[2])
+# grove_io(d1=Bus.fetch('PM2_BUS')[1], d2=Bus.fetch('PM2_BUS')[3], vcc=voltage_selector2[2])
 
 # Add GROVE headers for digital or I2C peripherals.
 grove_io(scl=Net.fetch('GR1-IO1'), sda=Net.fetch('GR1-IO2'))
@@ -152,11 +143,23 @@ fpga['J1,K1,H1,J2,H2,G2,G1,F2,F1,E2,F3,D1,E3,D2,C2,C1,B2,B1'] += GPIO_HDR_BUS[0:
 GPIO_HDR_BUS[4, 14] += Net.fetch('+3.3V'), Net.fetch('GND')
 
 # Create the SDRAM interface.
-sd = SdramIntfc()  # Create the SDRAM interface.
+sd = Interface(
+        clk = Net("SDRAM_CLK"),
+        cke = Net("SDRAM_CKE"),
+        cs = Net("SDRAM_CS"),
+        we = Net("SDRAM_WE#"),
+        ras = Net("SDRAM_RAS#"),
+        cas = Net("SDRAM_CAS#"),
+        dqm = Bus("SDRAM_DQM", 2),
+        ba = Bus("SDRAM_BA", 2),
+        addr = Bus("SDRAM_ADDR", 13),
+        data = Bus("SDRAM_DATA", 16),
+        gnd = Net.fetch("GND"),
+        vdd = Net.fetch("+3.3"),
+    )
+# Attach power and ground to SDRAM interface.
 sd.vdd += Net.fetch('+3.3V')
 sd.gnd += Net.fetch('GND')
-# Instantiate the SDRAM and connect it to its interface.
-sdram(intfc=sd)
 # Attach the FPGA to the interface.
 sd.clk        += fpga['IOR_141_GBIN2'], fpga['G16']
 sd.cke        += fpga['G15']
@@ -168,9 +171,11 @@ sd.dqm[0:1]   += fpga['J13, J15']
 sd.ba[0:1]    += fpga['H14, G13']
 sd.addr[0:12] += fpga['F13, E14, E13, D14, B16, C16, D15, D16, E16, F15, F14, F16, G14']
 sd.data[0:15] += fpga['R14, P14, M13, M14, L13, L14, K13, K14, J16, L16, M16, M15, N16, P16, P15, R15']
+# Instantiate the SDRAM and connect it to its interface.
+sdram(intfc=sd)
 
 # HDMI interface.
-hdmi = hdmi_intfc(clk_p=fpga['L4'], clk_n=fpga['L1'],
+hdmi = Interface(clk_p=fpga['L4'], clk_n=fpga['L1'],
                     data_p=fpga['K4,P1,R1'], data_n=fpga['M1,M4,N4'],
                     scl=fpga['P2'], sda=fpga['N3'], gnd=Net.fetch('GND'))
 

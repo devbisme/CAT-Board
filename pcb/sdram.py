@@ -1,25 +1,6 @@
 from globals import *
 
-class SdramIntfc(Interface):
-    """
-    Instantiate an interface for a synchronous DRAM.
-    """
-    def __init__(self, addr_width=13, data_width=16, circuit=None):
-        super(SdramIntfc, self).__init__(prefix='SD', circuit=circuit)
-        prefix = self.name + '_'
-        self.clk  = Net(prefix+'CLK')
-        self.cke  = Net(prefix+'CKE')
-        self.cs   = Net(prefix+'CS')
-        self.we   = Net(prefix+'WE#')
-        self.ras  = Net(prefix+'RAS#')
-        self.cas  = Net(prefix+'CAS#')
-        self.dqm  = Bus(prefix+'DQM', 2)
-        self.ba   = Bus(prefix+'BA', 2)
-        self.addr = Bus(prefix+'ADDR', addr_width)
-        self.data = Bus(prefix+'DATA', data_width)
-        self.vdd  = Net(prefix+'VDD')
-        self.gnd  = Net(prefix+'VSS')
-
+@subcircuit
 def sdram(intfc):
     """
     Instantiate an SDRAM and bypass caps.
@@ -44,8 +25,8 @@ def sdram(intfc):
         logger.warning('No predefined SDRAM. Using default SDRAM: {}.'.format(sdram_))
 
     # Attach power & ground pins.
-    intfc.vdd += sdram_['VDD, VDDQ']
-    intfc.gnd += sdram_['VSS, VSSQ']
+    sdram_['VDD, VDDQ'] += intfc.vdd
+    sdram_['VSS, VSSQ'] += intfc.gnd
 
     # Attach control pins.
     sdram_['CLK'] += intfc.clk
@@ -56,17 +37,30 @@ def sdram(intfc):
     sdram_['CAS#'] += intfc.cas
     sdram_['UDQM, LDQM'] += intfc.dqm[1:0]
     sdram_['BA[1:0]'] += intfc.ba[1:0]
-    sdram_['A[12:0]'] += intfc.addr[12:0]
+    sdram_.n['A[12:0]'] += intfc.addr[12:0]  # Force name search to avoid BGA pin numbers like A1.
     sdram_['DQ[15:0]'] += intfc.data[15:0]
 
     sdram_['NC'] += NC  # One, lonely no-connect pin.
 
     # Create a bypass cap for each power pin.
     for pwr in sdram_['VDD, VDDQ']:
-        C_byp()[1,2] += pwr, intfc.gnd  # Attach bypass caps from power to ground.
+        pwr & C_byp() & intfc.gnd
 
 if __name__ == '__main__':
-    intfc = SdramIntfc()
+    intfc = Interface(
+        clk = Net("SDRAM_CLK"),
+        cke = Net("SDRAM_CKE"),
+        cs = Net("SDRAM_CS"),
+        we = Net("SDRAM_WE#"),
+        ras = Net("SDRAM_RAS#"),
+        cas = Net("SDRAM_CAS#"),
+        dqm = Bus("SDRAM_DQM", 2),
+        ba = Bus("SDRAM_BA", 2),
+        addr = Bus("SDRAM_ADDR", 13),
+        data = Bus("SDRAM_DATA", 16),
+        gnd = Net.fetch("GND"),
+        vdd = Net.fetch("+3.3"),
+    )
     sdram(intfc)
     ERC()
     generate_netlist()

@@ -1,9 +1,9 @@
 site_name: 'CAT-Board'
 repo_name: 'CAT-Board'
 site_description: 'The CAT Board is a Raspberry Pi HAT with a Lattice iCE40HX FPGA.'
-site_author: 'XESS Corp.'
+site_author: 'Dave Vandenbout'
 site_favicon: 'readthedocs/xess.ico'
-copyright: '(c) 2015 by XESS Corp.'
+copyright: '(c) 2015-2021 by Dave Vandenbout.'
 
 pages:
 - 'Introduction': 'index.md'

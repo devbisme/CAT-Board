@@ -1,5 +1,6 @@
 from globals import *
 
+@subcircuit
 def osc(clk, vcc=None, gnd=None):
     """
     Instantiate an oscillator and a bypass cap.
