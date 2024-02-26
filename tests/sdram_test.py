@@ -24,10 +24,10 @@ from myhdl import *
 from led_digits_display import *
 #from simple_modules import *
 from ice40_primitives import *
-from SDRAM_Controller.SdramCntl import *
-from SDRAM_Controller.sdram import *
-from SDRAM_Controller.host_intf import *
-from SDRAM_Controller.sd_intf import *
+from SdramCntl import *
+from sdram import *
+from host_intf import *
+from sd_intf import *
 from rand_gen import uniform_rand_gen
 
 
@@ -224,7 +224,7 @@ if __name__ == '__main__':
                                       for _ in range(8)]
     led_status = Signal(intbv(0,0,16))
     pb = Signal(bool(1))
-    sd_intf_inst = sd_intf()
+    sd_intf_inst = SdramIntf()
     toVerilog(sdram_test, clk, sdram_clk, sdram_return_clk, d0.driver(),
                      d1.driver(), d2.driver(), d3.driver(),
                      d4.driver(), d5.driver(), d6.driver(),
