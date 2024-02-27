@@ -22,12 +22,8 @@
 
 from myhdl import *
 from led_digits_display import *
-#from simple_modules import *
 from ice40_primitives import *
-from SDRAM_Controller.SdramCntl import *
-from SDRAM_Controller.sdram import *
-from SDRAM_Controller.host_intf import *
-from SDRAM_Controller.sd_intf import *
+from SDRAM_Controller import *
 from rand_gen import uniform_rand_gen
 
 

@@ -1,7 +1,7 @@
 from myhdl import *
 from math import ceil,log
-from sd_intf import *
-from host_intf import *
+from .sd_intf import *
+from .host_intf import *
 
 def MySdramCntl(clk_i,host_intf, sd_intf):
 

@@ -21,7 +21,7 @@ def test_readWrite(host_intf,sd_intf):
     return test
 
 clk_i = Signal(bool(0))
-rst_i = ResetSignal(0,active=1,async=True)
+rst_i = ResetSignal(0,active=1,isasync=True)
 
 clkDriver_Inst      = clkDriver(clk_i)
 sd_intf_Inst        = sd_intf()

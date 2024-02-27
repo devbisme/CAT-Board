@@ -4,7 +4,7 @@ class host_intf(object):
 
     def __init__(self):
         # Host side signals
-        self.rst_i      = ResetSignal(0, active=1, async=True)
+        self.rst_i      = ResetSignal(0, active=1, isasync=True)
         self.rd_i       = Signal(bool(0))
         self.wr_i       = Signal(bool(0))
         self.addr_i     = Signal(intbv(0)[24:]) # host side address = sdram side row + col + bank
